@@ -11,7 +11,7 @@ export default function Post({menu,portal_menu}) {
 
     <div className="container">  
     {menu.program.title}
-    <Navber menu={menu} portal_menu={portal_menu}/>  
+    {/* <Navber menu={menu} portal_menu={portal_menu}/>   */}
        <div id="back">
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
        </div>        
