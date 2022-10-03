@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 
 function Navber (props) {
+    const menu=props.portal_menu;
 return(
     <div className="program_header">
 
