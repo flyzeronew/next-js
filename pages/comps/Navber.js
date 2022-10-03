@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from "next/link"
 import React from "react"
 
-function Navber (props) {      
+function Navber (props) {
+   const menu = props.menu;
    console.log(props);
 return(
     <div className="program_header">
@@ -40,8 +41,8 @@ return(
                 <div className="nav_bg"></div>
                 <ul className="nav_inner_pc">
                     {/* {
-                        portal_menu.length == 0
-                        ? 'Loading menu...': portal_menu.map((val, index) => (                                
+                        props.portal_menu.length == 0
+                        ? 'Loading menu...':props.portal_menu.map((val, index) => (                                
                             <li key={index} >
                             <a href={val.url}>{val.title}</a> 
                                 {
