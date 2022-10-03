@@ -7,7 +7,7 @@ function Navber (props) {
 
 return(
     <div className="program_header">
-{menu}
+
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
