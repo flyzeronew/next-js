@@ -3,10 +3,10 @@ import Link from "next/link"
 import React from "react"
 
 function Navber (props) {
-    const menu=props.portal_menu;
+    const menu=props.menu.program.title;
 return(
     <div className="program_header">
-
+{menu}
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
