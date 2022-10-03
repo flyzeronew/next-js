@@ -1,7 +1,6 @@
-
 import {useRouter} from 'next/router'
 import Image from 'next/image'
-import Navber from './comps/Navber'
+import Navber from '../comps/Navber'
 
 export default function Post({menu,portal_menu}) {
   const router =useRouter();
