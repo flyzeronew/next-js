@@ -5,7 +5,7 @@ function Navber ({menu,portal_menu}) {
 return(
 
     <div className="program_header">
-{menu.program.title}
+
     </div>
 
     )
