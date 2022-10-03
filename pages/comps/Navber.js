@@ -6,7 +6,7 @@ function Navber (props) {
    console.log(props);
 return(
     <div className="program_header">
-{props.menu.program.title}
+
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
