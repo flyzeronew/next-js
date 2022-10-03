@@ -45,7 +45,7 @@ class Navber extends React.Component {
                 <nav>
                     <div className="nav_bg"></div>
                     <ul className="nav_inner_pc">
-                        {/* {
+                        {
                             portal_menu.length == 0
                             ? 'Loading menu...': portal_menu.map((val, index) => (                                
                                 <li key={index} >
@@ -63,7 +63,7 @@ class Navber extends React.Component {
                                     }
                                 </li>                                
                             ))
-                        }  */}
+                        } 
                     </ul>
                 </nav>
             </div>
