@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from "next/link"
 
-function Navber () {    
+function Navber () {      
+   
 return(
-
     <div className="program_header">
 
         <div className="main_header">
@@ -65,3 +65,4 @@ return(
     )
 }
 export default Navber;
+
