@@ -1,7 +1,7 @@
 
 import {useRouter} from 'next/router'
 import Image from 'next/image'
-import Header from './comps/Navber'
+// import Header from './comps/Navber'
 
 export default function Post({menu,portal_menu}) {
   const router =useRouter();
@@ -9,7 +9,7 @@ export default function Post({menu,portal_menu}) {
   return (
 
     <div className="container">  
-    <Header menu={menu} portal_menu={portal_menu}/>  
+    {/* <Header menu={menu} portal_menu={portal_menu}/>   */}
        <div id="back">
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
        </div>        
