@@ -1,7 +1,7 @@
 
 import {useRouter} from 'next/router'
 import Image from 'next/image'
-// import Header from './comps/Navber'
+import Header from './comps/Navber'
 
 export default function Post({menu,portal_menu}) {
   const router =useRouter();
