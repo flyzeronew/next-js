@@ -7,7 +7,6 @@ function Navber (props) {
     const portal_menu=props.portal_menu;
 return(
     <div className="program_header">
-{menu.program.title}
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
@@ -40,25 +39,26 @@ return(
             <nav>
                 <div className="nav_bg"></div>
                 <ul className="nav_inner_pc">
-                    {/* {
-                        props.portal_menu.length == 0
-                        ? 'Loading menu...':props.portal_menu.map((val, index) => (                                
-                            <li key={index} >
-                            <a href={val.url}>{val.title}</a> 
-                                {
-                                    val.child ? 
-                                        <div className="nav_sub">
-                                            {
-                                                val.child.map(val2 => (
-                                                    <a href={val2.url}>{val2.title}</a>
-                                                ))
-                                            }                                            
-                                        </div>
-                                    : '' 
-                                }
-                            </li>                                
-                        ))
-                    }  */}
+                    {portal_menu.map((v, k) => (
+                        <li key={k}>
+                            <Link href={v.url}>
+                                <a>{v.title}</a>
+                            </Link>  
+                            {
+                                v.child ?
+                                <div className="nav_sub">
+                                    {
+                                     v.child.map((v2, k2) => (
+                                        <Link key={k2} href={v2.url}>
+                                            <a>{v2.title}</a>
+                                        </Link> 
+                                    ))
+                                    }                                            
+                                </div> : ''
+                            }                          
+                        </li>
+                    ))}
+                    
                 </ul>
             </nav>
         </div>
