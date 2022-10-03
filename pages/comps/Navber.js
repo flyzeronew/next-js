@@ -2,9 +2,7 @@ import Image from 'next/image'
 import Link from "next/link"
 import React from "react"
 
-function Navber (props) {
-   const menu = props.menu.program.title;
-
+function Navber () {
 return(
     <div className="program_header">
 
