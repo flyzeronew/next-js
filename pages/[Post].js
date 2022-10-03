@@ -1,13 +1,15 @@
 
 import {useRouter} from 'next/router'
 import Image from 'next/image'
+import Header from './comps/Navber'
 
 export default function Post({menu,portal_menu}) {
   const router =useRouter();
   return <pre>{JSON.stringify(menu,null,4)}</pre>
   return (
 
-    <div className="container">    
+    <div className="container">  
+    <Header menu={menu} portal_menu={portal_menu}/>  
        <div id="back">
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
        </div>        
