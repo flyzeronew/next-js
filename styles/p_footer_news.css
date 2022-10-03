@@ -1,0 +1,250 @@
+.footer{
+	background-color: #3e3a39;
+	width: 100%;
+	display: block;
+	padding-top: 20px;
+	margin-top: 10px;
+	
+}
+/*底霸內框-fly建*/
+.footer .square{
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	display: block;
+}
+/*底霸內框手機版*/
+.square-m{
+	width: 100%;
+	color:#FFF;
+	overflow: hidden;
+	display: none;
+}
+.square-m-under1{
+	font-size: 13px;
+	text-align: center;	
+}
+.square-m-under2{
+	font-size: 11px;
+	display: none;
+	text-align: center;
+}
+.footer .square-m ul{
+	text-align: center;
+}
+.footer .square-m ul li{
+	padding-right: 10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	padding-left: 5px;
+	font-size: 12px;
+	display: inline;
+}
+.footer .square-m ul li:last-child{
+	border:none;
+	}
+.footer .square-m p{
+	text-align: center;
+}
+
+/*官網連結*/
+.footer .square ul{
+    list-style-type: none;
+    float: left;
+    padding: 10px;
+    margin: 0;
+}
+.footer .square li{
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 30px;
+}
+.footer .square li a{
+	transition: 0.3s;
+	color: #FFF;
+	text-decoration: none;
+	text-align: left;
+	font-size: 13px;
+}
+.footer .square li a:hover{
+	color: #ED7AA4;
+}
+.footer .square li:last-child{
+	border:none;
+}
+/*底霸logo*/
+.footer .logo{
+	display: block;
+	float: left;
+	padding-top: 50px;
+	padding-right: 70px;
+	padding-bottom: 50px;
+	padding-left: 70px;
+}
+
+/*客服區塊*/
+.service{
+	color: #FFF;
+	font-size: 13px;
+	display: block;
+	margin-left: 10px;
+	overflow: hidden;
+	padding-top: 0px;
+	padding-left: 20px;
+}
+.service p{
+	padding:2px 0 5px 0;
+	margin: 0;
+}
+.footer .service ul{
+	padding-top: 0;
+	padding-left: 0;
+}
+.footer .service li{
+	padding-left: 45px;
+	display: block;
+	padding: 10px 35px;
+}
+.service  li:nth-child(1){
+	background-image: url(../public/icon9.png);
+	background-repeat: no-repeat;
+	background-position:0 7px;
+	}
+.service li:nth-child(2){
+	background-image: url(../public/icon10.png);
+	background-repeat: no-repeat;
+	background-position:0 7px;
+	}
+.service li:nth-child(3){
+	background-image: url(../public/icon11.png);
+	background-repeat: no-repeat;
+	background-position: 0 7px;
+	}			
+.service a{
+	transition: 0.3s;
+	color: #999;
+	text-decoration: none;
+}
+
+
+/*手機版*/
+
+
+
+.footer .square li:nth-last{}
+
+/*版權宣告*/
+small{
+	font-weight: normal;
+	font-size: 12px;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	color: #FFF;
+	letter-spacing: 1px;
+	background-color: #000;
+	padding: 10px;
+	}
+@media (max-width: 1199px) {
+.footer{
+	width:1200px;
+}
+}
+@media (max-width: 1023px) {
+.footer{
+	width:100%;
+}
+.footer .square{
+	width:100%;
+}
+
+.footer .logo {
+    display: block;
+    float: left;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+}
+.footer .square li {
+    padding-right: 10px;
+}
+}
+
+@media (max-width: 900px) {
+.footer{
+	width: 100%;
+	padding-top: 0px;
+	padding-bottom: 10px;
+	margin-top: 0px;
+}
+/*內框-fly建*/
+.footer .square {
+	display: none;
+}
+.footer .square ul{
+	display: none;
+}
+small{
+	display:none;
+	}
+	
+.square-m{
+	box-sizing: border-box;
+	display: block;	
+	padding: 10px;
+	background-color: #000;
+}
+.footer .square-m ul{
+	
+}
+.footer .square-m ul li{
+   font-size: 12px;
+}
+
+.square-m-under1{
+   font-size: 12px;	
+}
+.square-m ul li a{
+	color: #fff;
+}
+
+}
+
+@media (max-width: 480px) {
+.footer .square-m ul{
+	margin-top: 10px;
+}
+.footer .square-m ul li{
+   font-size: 13px;
+}
+.square-m-under1{
+   font-size: 13px;	
+}
+
+}
+@media (max-width: 320px) {
+.square-m ul{
+
+	display: none;
+}
+
+.square-m-under1{
+	font-size: 13px;
+	display: none;
+}
+.square-m-under2{
+	font-size: 13px;
+	display:  block;
+}
+.square-m-under2 a{
+	font-size: 13px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+
+}

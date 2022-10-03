@@ -1,0 +1,166 @@
+
+/*共用文字*/
+.font15_1,.font15_1 a{color:#933571; font-size:15px;}
+.font16_1,.font16_1 a{color:#3e5b94; font-size:16px; font-weight:bolder;}.font16_1 a:hover{color:#fff;}
+.font16_2,.font16_2 a{color:#b81b26; font-size:16px; font-weight:bolder;}.font16_2 a:hover{color:#fff;}
+.font16_3,.font16_3 a{color:#ffffff; font-size:16px !important;}
+.font16_4,.font16_4 a{color:#666666; font-size:16px;}
+.font16_5,.font16_5 a{color:#9d9d9d; font-size:16px;}
+.font16_6,.font16_6 a{color:#000000; font-size:16px; line-height:24px;}.font16_6 a:hover{color:#933571;}
+.font18_1,.font18_1 a{color:#000000; font-size:18px;}.font18_1 a:hover{color:#933571;}
+.font18_2,.font18_2 a{color:#FFFFFF; font-size:18px;}
+.font18_3,.font18_3 a{color:#5c5c5c; font-size:18px; font-weight:bolder;}
+.font18_4,.font18_4 a{color:#888888; font-size:18px;}.font18_4 a:hover{color:#933571;}
+.font18_5,.font18_5 a{color:#555555; font-size:18px;}.font18_5 a:hover{color:#933571;}
+.font20_1,.font20_1 a{color:#ffffff; font-size:20px;}
+.font20_2,.font20_2 a{color:#666666; font-size:20px;}
+.font24_1,.font24_1 a{color:#000000; font-size:24px;}.font24_1 a:hover{color:#933571;}
+.font24_2,.font24_2 a{color:#000000; font-size:22px;}.font24_2 a:hover{color:#933571;}
+.font26_1,.font26_1 a{color:#ffffff; font-size:26px;}
+.font26_2,.font26_2 a{color:#3e3a39; font-size:26px; font-weight:bolder;}.font26_2 a:hover{color:#933571;}
+.font25_1,.font25_1 a{color:#933571; font-size:25px;font-weight:bolder;}
+.font30_1,.font30_1 a{color:#933571; font-size:30px;font-weight:bolder;}.font30_1 a:hover{color:#933571;}
+/*共用文字ed*/
+
+/*間隔高度*/
+.height5px{height:5px;}
+.height10px{height:10px;}.height20px{height:20px;}.height30px{height:30px;}
+.height40px{height:40px;}.height50px{height:50px;}.height60px{height:60px;}
+/*間隔高度ed*/
+
+
+/*共用廣告*/
+.ad_frame01,.ad_frame01 img{width:100%; height:100%;}
+.ad_970x90_pc{width:970px; height:90px; margin: 0 auto;}
+.ad_970x250_pc{width:970px; height:250px; margin: 0 auto;}
+.ad_650x100_pc{width:650px; height:100px; margin: 0 auto;}
+.ad_300x600_pc{width:300px; height:600px; margin: 0 auto;}
+.ad_300x250_pc,.ad_300x250_mo{width:300px; height:250px; margin: 0 auto;}
+.ad_300x250_2{width:300px; height:250px; margin: 0 auto;}
+.ad_300x250_mo{display:none;margin-bottom:20px;}
+.ad_320x100_mo{width:320px; height:100px; margin: 0 auto;display:none;margin-bottom:10px;}
+.program_content_ad_box{}
+/*共用廣告ed*/
+
+/*共用物件*/
+
+/*抬頭線條*/
+.line01{width:100%;height:3px;background-color:#ac005b;}
+/*抬頭線條ed*/
+
+/*more*/
+.more01{}.more01 a{display:block;padding:5px 15px;background-color:#FFF;border:#ac005b 1px solid;border-radius:30px;transition:0.3s;}
+.more01 a:hover{background-color:#ac005b;border-radius:30px;color:#FFF;}
+/*more ed*/
+
+/*按鈕*/
+
+
+
+/*社群*/
+.community_btn{}
+.community_btn ul{}
+.community_btn li{display:inline-block; margin:8px 0px 0px 8px; background-color:#ffffff;border-radius:30px;}
+.community_btn li:nth-child(1){border:#3e5b94 2px solid; background-image:url(../public/icon_facebook.svg);background-repeat:no-repeat; background-size:10px; background-position:10px center;}
+.community_btn li:nth-child(2){border:#b81b26 2px solid; background-image:url(../public/icon_youtube.svg);background-repeat:no-repeat; background-size:20px; background-position:10px center;}
+.community_btn li:nth-child(1) a{display:block;padding:3px 10px 3px 25px !important; font-size:14px;}
+.community_btn li:nth-child(2) a{display:block;padding:3px 10px 3px 35px !important; font-size:14px;}
+.community_btn li:nth-child(1):hover{ background-color:#3e5b94;background-image:url(../public/icon_facebook-o.svg);}
+.community_btn li:nth-child(2):hover{ background-color:#b81b26;background-image:url(../public/icon_youtube-o.svg);}
+/*社群ed*/
+
+
+
+.button01 a{ cursor:pointer;display:block; padding:5px 30px;background-color:#f5f5f5; border-radius:5px; box-shadow:#bebebe 0px 5px 0px;transition:0.3s;}
+.button01 a:hover,.button01 a.active{background-color:#db0277; box-shadow:#ac005b 0px 5px 0px; color:#fff;}
+/*按鈕 ed*/
+/*靠左靠右*/
+.text_left{text-align:left;}
+.text_center{text-align:center;}
+.text_right{text-align:right;}
+.float_left{float:left;}
+.float_right{float:right;}
+/*靠左靠右 ed*/
+
+/*跳頁列*/
+.jump_list{}
+.jump_list ul{display:flex;align-items:center;justify-content:center;}
+.jump_list li,.jump_list_up_down li{
+	letter-spacing:0px; font-size:15px; color:#666666;width:auto;height:auto;margin:0px; display:inline;
+    vertical-align:middle;
+}
+.jump_list li a{display:block;color:#666666; padding:7px 14px; margin-right:0;border:#dddddd solid 1px;border-left:0px;float:left;vertical-align: middle;cursor: pointer; }
+.jump_list li a:hover,.jump_list li.act a{color:#FFF;background-color:#933571;}
+.jump_list li:first-child a{border-radius:5px 0 0 5px;border-left:#dddddd solid 1px;padding:6px 14px;}
+.jump_list li:last-child a{border-radius:0 5px 5px 0;border-right:#dddddd solid 1px;padding:6px 14px;}
+/*跳頁列 ed*/
+/*上下頁2*/
+.jump_list_up_down2{}
+.jump_list_up_down2 li{font-size:15px;display:inline-block;margin-bottom:10px; width:100%; overflow:hidden;}
+.jump_list_up_down2 li a{ font-size:16px;padding:0 20px;overflow:hidden;
+	display:block;padding:10px 20px;color:#000;background-color:#c8c9cb; margin-right:5px; background-image:url(../public/arraw02-L.svg); background-repeat:no-repeat; background-size:15px; background-position:1% center;
+}
+.jump_list_up_down2 li a p{padding:0 10px; overflow:hidden;white-space : nowrap; width:80%;}
+
+.jump_list_up_down2 li:nth-child(2) a{background-image:url(../public/arraw02-R.svg); background-repeat:no-repeat;background-position:99% center;}
+.jump_list_up_down2 li a:hover{color:#FFF;background-color:#933571; transition:0.3s;}
+/*上下頁2 ed*/
+/*PC手機版隱藏*/
+.all_display{display:none;}
+.mobile_display{display:none;}
+.pc_display{display:block;}
+/*PC手機版隱藏 ed*/
+@media (max-width: 1024px){
+/*上下頁2*/
+.jump_list_up_down2 li a{margin-right:0px;}
+/*上下頁2 ed*/
+/*PC手機版隱藏*/
+.mobile_display{display:block;}
+.pc_display{display:none;}
+/*pC手機版隱藏 ed*/
+}
+
+/*共用物件ed*/
+ 
+/* RWD響應式在下面----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1024px){
+/*間隔高度*/
+.height20px,.height30px,.height40px,.height50px,.height60px{height:10px;}
+.height40px{height:20px;}
+/*間隔高度ed*/	
+/*共用廣告*/
+.ad_970x90_pc{display:none;}
+.ad_970x250_pc{display:none;}
+.ad_320x100_mo{display:block;}
+.ad_300x250_mo{display:block}
+/*共用廣告ed*/
+}
+
+@media (max-width: 850px){
+/*共用文字*/
+.font24_1,.font24_1 a{font-size:18px;}
+/*共用文字ed*/	
+}
+@media (max-width: 640px){
+/*共用文字*/
+.font30_1,.font30_1 a{font-size:24px;}
+.font25_1,.font25_1 a{font-size:24px;}
+.font26_1,.font26_1 a{font-size:20px;}
+.font26_2,.font26_2 a{font-size:24px;}
+.font20_2,.font20_2 a{font-size:16px;}
+.font18_4,.font18_4 a{font-size:16px;}
+/*共用文字ed*/	
+}
+@media (max-width: 414px){}
+@media (max-width: 375px){}
+@media (max-width: 320px){
+/*共用文字*/
+.font16_4,.font16_4 a{font-size:15px;}
+.font20_2,.font20_2 a{font-size:15px;}
+.font24_1,.font24_1 a{font-size:16px;}
+/*共用文字ed*/		
+/*共用廣告*/
+.ad_320x100_mo{width:100%;}
+/*共用廣告ed*/
+}
+/* RWD響應式在下面----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ed*/	
