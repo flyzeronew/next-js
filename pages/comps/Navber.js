@@ -2,6 +2,12 @@ import Image from 'next/image'
 import Link from "next/link"
 import React from "react"
 class Navber extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menu:[],portal_menu:[],child_menu:[]
+        };
+      }
     render () {
 
     return(
