@@ -62,6 +62,30 @@ return(
                 </ul>
             </nav>
         </div>
+        <div className="program_header_box">
+            <div className="program_header_box_hamburger">
+                
+            </div>
+            <div className="program_header_titel font26_1"><a href={"/"}>{menu.program.title}</a></div>
+            <div className="program_header_nav">
+                    <ul className="font20_1">
+                        {
+                            menu.data.length == 0
+                            ? 'Loading menu...'
+                            : menu.data.map((v, k) => (
+                                k == 0 ?
+                                 <li key={k}> 
+                                    <Link href={"/"}><a >{v.title}</a></Link>                                 
+                                 </li>
+                                 :
+                                 <li key={k}> 
+                                    <Link href={v.url}><a >{v.title}</a></Link>                                     
+                                 </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+        </div>
     </div>
 
     )
