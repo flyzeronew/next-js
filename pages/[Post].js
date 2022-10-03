@@ -6,11 +6,11 @@ import Navber from './comps/Navber'
 export default function Post({menu,portal_menu}) {
   const router =useRouter();
   //return <pre>{JSON.stringify(menu,null,4)}</pre>
-  //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
+  return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
 
     <div className="container">  
-    {menu.program.title}
+    {/* {menu.program.title} */}
     {/* <Navber menu={menu} portal_menu={portal_menu}/>   */}
        <div id="back">
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
