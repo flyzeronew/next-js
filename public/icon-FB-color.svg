@@ -1,0 +1,11 @@
+<svg id="icon-FB-color" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="Ellipse_1" data-name="Ellipse 1" fill="#fff" stroke="#ccc" stroke-width="1">
+    <circle cx="20" cy="20" r="20" stroke="none"/>
+    <circle cx="20" cy="20" r="19.5" fill="none"/>
+  </g>
+  <g id="Group_12" data-name="Group 12" transform="translate(-2.36 -0.375)">
+    <g id="Group_11" data-name="Group 11" transform="translate(16.36 8.375)">
+      <path id="Path_69" data-name="Path 69" d="M24.319,21.219h3.622l.549-4.226H24.319V14.3c0-1.207.329-2.031,2.085-2.031h2.25V8.539a28.808,28.808,0,0,0-3.238-.164c-3.239,0-5.434,1.976-5.434,5.544v3.074H16.36v4.226h3.622V32.032h4.337Z" transform="translate(-16.36 -8.375)" fill="#1877f2"/>
+    </g>
+  </g>
+</svg>
