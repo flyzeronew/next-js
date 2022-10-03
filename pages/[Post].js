@@ -7,7 +7,7 @@ export default function Post({menu,portal_menu}) {
   const router =useRouter();
   // 印資料
   //return <pre>{JSON.stringify(menu,null,4)}</pre>
-  // return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
+  return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
 
     <div className="container">   
