@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link"
 
-function Navber ({menu,portal_menu}) {    
+function Navber () {    
 return(
 
     <div className="program_header">
