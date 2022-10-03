@@ -4,10 +4,10 @@ import React from "react"
 
 function Navber (props) {
    const menu = props.menu;
-   console.log(props);
+
 return(
     <div className="program_header">
-
+{menu.program.title}
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
