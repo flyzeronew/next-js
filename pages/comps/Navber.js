@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from "next/link"
 import React from "react"
 
-function Navber ({menu,portal_menu}) {      
-   
+function Navber (props) {      
+   console.log(props);
 return(
     <div className="program_header">
-
+{props.menu.program.title}
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
