@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from "next/link"
 
-function Navber () {      
+function Navber ({menu,portal_menu}) {      
    
 return(
     <div className="program_header">
-
+{menu.program.title}
         <div className="main_header">
             <div className="header_inner">
                 <h1 className="header_logo">
