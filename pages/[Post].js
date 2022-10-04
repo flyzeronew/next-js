@@ -2,8 +2,9 @@ import {useRouter} from 'next/router'
 import Image from 'next/image'
 import Navber from '../comps/Navber'
 
-export default function Post({menu,portal_menu}) {
-  const router =useRouter();
+export default function Post(props) {
+  const menu=props.menu;
+  const portal_menu=props.portal_menu;  
   //return <pre>{JSON.stringify(menu,null,4)}</pre>
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
