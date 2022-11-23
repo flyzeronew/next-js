@@ -13,6 +13,8 @@ export default function Post(props) {
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="Keywords" content="關鍵字1,關鍵字2" /> 
+        <meta name="description" content="網頁敘述，網頁敘述" />
       </Head> 
        <Navber menu={menu} portal_menu={portal_menu}/>
        <div id="back">
