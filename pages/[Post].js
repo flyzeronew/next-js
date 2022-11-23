@@ -1,21 +1,24 @@
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 import Image from 'next/image'
 import Navber from '../comps/Navber'
 
 export default function Post(props) {
   const menu=props.menu;
   const portal_menu=props.portal_menu;  
-  //return <pre>{JSON.stringify(menu,null,4)}</pre>
+  // return <pre>{JSON.stringify(menu,null,4)}</pre>
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
-
     <div className="container">   
-    <Navber menu={menu} portal_menu={portal_menu}/>
+      <Head>
+        <title>My page title</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head> 
+       <Navber menu={menu} portal_menu={portal_menu}/>
        <div id="back">
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
        </div>        
     </div>    
-
   )
 }
 Post.getInitialProps =async (i)=>{  
