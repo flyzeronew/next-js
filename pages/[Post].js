@@ -15,6 +15,7 @@ export default function Post(props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Keywords" content="關鍵字1,關鍵字2" /> 
         <meta name="description" content="網頁敘述，網頁敘述" />
+        <meta name="robots" content="noindex,nofollow" />
       </Head> 
        <Navber menu={menu} portal_menu={portal_menu}/>
        <div id="back">
