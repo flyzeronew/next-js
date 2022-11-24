@@ -7,6 +7,11 @@ import Link from "next/link"
 export default function Post(props) {
   const menu = props.menu;
   const portal_menu = props.portal_menu;
+  const fb_url='https://www.facebook.com/tvbsfb';
+  const iframe_fb = '<iframe src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
+  function Iframe(props) {
+    return (<div dangerouslySetInnerHTML={ {__html:  props.iframe?props.iframe:""}} />);
+  }
   //return <pre>{JSON.stringify(menu,null,4)}</pre>
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
@@ -44,6 +49,7 @@ export default function Post(props) {
         
         <div className="program_content_right">
           <div className="program_content_right_time"><p className="font16_3">首播:歡樂台每週一至週五 18:00~18:30</p></div>
+          <div className="program_content_right_fb_box"><Iframe iframe={iframe_fb}/></div>
         </div>
       </div>
     </div>
