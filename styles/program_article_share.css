@@ -49,8 +49,9 @@
 /*抬頭線條ed*/
 
 /*more*/
-.more01{}.more01 a{display:block;padding:5px 15px;background-color:#FFF;border:#ac005b 1px solid;border-radius:30px;transition:0.3s;}
-.more01 a:hover{background-color:#ac005b;border-radius:30px;color:#FFF;}
+.more01{}
+.more01 a,.more01 button{display:block;padding:5px 15px;background-color:#FFF;border:#ac005b 1px solid;border-radius:30px;transition:0.3s;cursor: pointer;}
+.more01 a:hover,.more01 button:hover{background-color:#ac005b;border-radius:30px;color:#FFF;}
 /*more ed*/
 
 /*按鈕*/
