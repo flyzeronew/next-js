@@ -35,7 +35,7 @@ p{text-align:left;}
 
 /* 按鈕列總包------------------------------------------------------------------------------------------------------ */
 /* 按鈕列底 */
-.program_header{background-color:#933571;}
+.program_header{background-color:#933571;margin-bottom:20px;}
 @media (max-width: 1199px){
 	.program_header{width:1200px;}
 }
@@ -114,28 +114,14 @@ p{text-align:left;}
 /* 主視覺 kv */
 .program_content_main_kv{overflow:hidden; position:relative;}
 .program_content_main_kv,.program_content_main_kv li{}
-.program_content_main_kv ul{}
-.program_content_main_kv li{position:relative;}
-.program_content_main_kv li a:hover .mask{
+
+.program_content_main_kv a:hover .mask{
 	background-color: rgba(0,0,0,0.4);transition: 0.3s;
 }
 .program_content_main_kv_writing{width:100%;bottom:0; position:absolute;background-color:rgba(241,241,241,0.9); z-index: 2;}
 .program_content_main_kv_writing p{ padding:15px;}
-.program_content_main_kv .img{
-	line-height: 0;
-	margin-bottom: 8px;
-	position: relative;
-	width: 100%;
-	padding-bottom: 56.25%;
-	overflow: hidden;
-}
-.program_content_main_kv .img img{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-position: top;
-}
-
+.program_content_main_kv .img{line-height:0;}
+.program_content_main_kv .img img{}
 /* 箭頭 */
 .program_content_main_kv_arrawL,.program_content_main_kv_arrawR{width:45px;position:absolute;top:40%; z-index:1; cursor:pointer;}
 .program_content_main_kv_arrawL{left:10px;}
