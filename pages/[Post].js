@@ -34,7 +34,7 @@ export default function Post(props) {
                     </div>
                     <div className="img">
                       <div className="mask"></div>                       
-                        <Image src="/kv850x470.jpg" alt="img" width={850} height={450} />
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                     </div>                    
                   </a>
                 </Link>

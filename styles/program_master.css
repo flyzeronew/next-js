@@ -113,7 +113,6 @@ p{text-align:left;}
 
 /* 主視覺 kv */
 .program_content_main_kv{overflow:hidden; position:relative;}
-.program_content_main_kv,.program_content_main_kv li{}
 
 .program_content_main_kv a:hover .mask{
 	background-color: rgba(0,0,0,0.4);transition: 0.3s;
@@ -418,7 +417,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 
 .program_content_main{width:100%;float:none;}
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 /* 主視覺 kv ed*/
 
 /* 網頁內容包中間ed */
@@ -460,12 +459,11 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 
 @media (max-width: 960px){
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
-/* 主視覺 kv ed*/	
+.program_content_main_kv{}
 }
 @media (max-width: 850px){
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 /* 主視覺 kv ed*/	
 
 /*內容共用*/
@@ -501,14 +499,14 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 }
 @media (max-width: 750px){
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 /* 主視覺 kv ed*/	
 }
 @media (max-width: 640px){
 /* 主視覺 kv */
 .program_header_box_hamburger{top:45px;}
 .program_header_box{height:45px;}
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 .program_content_main_kv_writing p{ padding:8px 15px;}
 /* 主視覺 kv ed*/	
 /*抬頭*/
@@ -548,7 +546,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 }
 @media (max-width: 414px){
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 
 /* 箭頭 */
 .program_content_main_kv_arrawL,.program_content_main_kv_arrawR{width:40px;top:30%;}
@@ -561,13 +559,13 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 }
 @media (max-width: 375px){
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 /* 主視覺 kv ed*/
 }
 @media (max-width: 320px){
 
 /* 主視覺 kv */
-.program_content_main_kv,.program_content_main_kv li{}
+.program_content_main_kv{}
 .program_content_main_kv_writing p{padding:5px 5px;}
 /* 主視覺 kv ed*/
 
