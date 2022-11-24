@@ -60,7 +60,7 @@ export default function Post(props) {
               <div className="program_content_main_information_titel_more">
                 <div className="more01">
                   <Link href="https://www.tvbs.com.tw/">
-                    <a className="font15_1">MORE</a>
+                    <button className="font15_1">MORE</button>
                   </Link>                  
                 </div>
               </div>
