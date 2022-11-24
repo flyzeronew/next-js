@@ -8,7 +8,7 @@ export default function Post(props) {
   const menu = props.menu;
   const portal_menu = props.portal_menu;
   const fb_url='https://www.facebook.com/tvbsfb';
-  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
+  const iframe_fb = '<iframe title="tvbs"" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {
     return (<div dangerouslySetInnerHTML={ {__html:  props.iframe?props.iframe:""}} />);
   }
@@ -52,6 +52,19 @@ export default function Post(props) {
           <div className="program_content_right_fb_box"><Iframe iframe={iframe_fb}/></div>
         </div>
       </div>
+
+      <div className="program_content2">
+        <div className="program_content2_main2">
+          <div className="program_content_main_information_titel">
+              <p className="program_content_main_information_titel_p font30_1">精彩內容</p>
+              <div className="program_content_main_information_titel_more">
+                <div className="more01"><a className="font15_1" href='##'>MORE</a></div>
+              </div>
+              <div className="line01"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
