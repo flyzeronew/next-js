@@ -133,6 +133,60 @@ export default function Post(props) {
           </div>
         </div>
       </div>
+      
+      <div className="program_content">
+        <div className="program_content_main">
+          <div className="program_content_main_information_titel">
+              <p className="program_content_main_information_titel_p font30_1">節目資訊</p>
+              <div className="line01"></div>
+          </div>
+
+          <div className="program_content_main_information_one">
+            <div className="program_content_main_information_one_img1">
+              <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+            </div>
+            <div className="program_content_main_information_one_p1">
+              <p><strong>面對變動的世局，提供即時分析專業解讀面對變動的世局，提供即時分析專業解讀面對變動的世局，提供即時分析專業解讀面對變動的世局，提供即時分析專業解讀面對變動的世局，提供即時分析專業解讀面對變動的世局，提供即時分析專業解讀</strong></p>
+              <p>主持人：方念華</p>
+            </div>
+           
+          </div>
+        </div>
+
+        <div className="program_content_right">
+          <div className="program_content_main_information_titel">
+              <p className="program_content_main_information_titel_p font30_1">相關新聞</p>
+              <div className="line01"></div>
+          </div>
+
+          <div className="program_content_right_activity2">
+            <ul>
+              <li>
+                <Link href="https://www.tvbs.com.tw/">
+                  <a>
+                    <div className="program_content_right_activity_img2">
+                    <div className="mask"></div>
+                      <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />                  
+                    </div>
+                    <p className="font18_1">相關新聞相關新聞相關新聞相關新聞相關新聞相關新聞</p>
+                  </a>
+                </Link>
+              </li> 
+              <li>
+                <Link href="https://www.tvbs.com.tw/">
+                  <a>
+                    <div className="program_content_right_activity_img2">
+                    <div className="mask"></div>
+                      <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />                  
+                    </div>
+                    <p className="font18_1">相關新聞相關新聞相關新聞相關新聞相關新聞相關新聞</p>
+                  </a>
+                </Link>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </div>
 
     </div>
   )
