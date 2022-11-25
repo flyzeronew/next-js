@@ -66,6 +66,71 @@ export default function Post(props) {
               </div>
               <div className="line01"></div>
           </div>
+
+          <div className="program_content_main_information2">
+            <ul>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+                <li>
+                  <Link href="https://www.tvbs.com.tw/">
+                    <a>
+                      <div class="program_content_main_information2_img">                    
+                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                      </div>                      
+                      <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
+                    </a>
+                  </Link>  
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
 
