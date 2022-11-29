@@ -40,7 +40,7 @@ export default function Post(props) {
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
-                      <Image src={index_cover.cover_image} alt="img" width={850} height={450}/>                     
+                      <Image src={index_cover.cover_image} alt="img" width={850} height={470}/>                     
                   </div>                    
                 </a>           
           </div>
