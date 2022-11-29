@@ -13,13 +13,12 @@ export default function Post(props) {
   const fb_url='https://www.facebook.com/tvbsfb';
   const iframe_fb = '<iframe title="tvbs"" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {
-    return (<div dangerouslySetInnerHTML={ {__html:  props.iframe?props.iframe:""}} />);
+    return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);
   }
   //return <pre>{JSON.stringify(menu,null,4)}</pre>
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
-    <div className="container">
-
+    <div className="container">    
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -34,17 +33,17 @@ export default function Post(props) {
       <div className="program_content">
         <div className="program_content_main">
           <div className="program_content_main_kv_box">
-            <div className="program_content_main_kv">
-            <a href={index_cover.url ? index_cover.url:'/'+postId}>
-                    <div className="program_content_main_kv_writing">
-                      <p className=" font20_2">{index_cover.title}</p>
-                    </div>
-                    <div className="img">
-                      <div className="mask"></div> 
-                        <img src={index_cover.cover_image} alt="img"/>
-                    </div>                    
-                  </a>
-            </div>
+            <div className="program_content_main_kv">        
+                <a href={index_cover.url ? index_cover.url:'/'+postId}>
+                  <div className="program_content_main_kv_writing">
+                    <p className=" font20_2">{index_cover.title}</p>
+                  </div>
+                  <div className="img">
+                    <div className="mask"></div> 
+                      <Image src={index_cover.cover_image} alt="img" width={850} height={450}/>                     
+                  </div>                    
+                </a>           
+          </div>
           </div>
         </div>
         
