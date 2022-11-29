@@ -35,8 +35,7 @@ export default function Post(props) {
         <div className="program_content_main">
           <div className="program_content_main_kv_box">
             <div className="program_content_main_kv">
-                <Link href={index_cover.url ? index_cover.url:'/'+postId}>
-                  <a>
+            <a href={index_cover.url ? index_cover.url:'/'+postId}>
                     <div className="program_content_main_kv_writing">
                       <p className=" font20_2">{index_cover.title}</p>
                     </div>
@@ -45,7 +44,6 @@ export default function Post(props) {
                         <img src={index_cover.cover_image} alt="img"/>
                     </div>                    
                   </a>
-                </Link>
             </div>
           </div>
         </div>
