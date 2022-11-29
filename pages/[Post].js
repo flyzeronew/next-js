@@ -6,6 +6,7 @@ import Link from "next/link"
 
 export default function Post(props) {
   const router = useRouter();
+  const postId=router.query.Post;
   const menu = props.menu;
   const portal_menu = props.portal_menu;
   const index_cover = props.index_cover[0];
@@ -34,8 +35,8 @@ export default function Post(props) {
         <div className="program_content_main">
           <div className="program_content_main_kv_box">
             <div className="program_content_main_kv">
-                <Link href={index_cover.url ? index_cover.url:'/'+router.query.Post}>
-                  <a target="_blank">
+                <Link href={index_cover.url ? index_cover.url:'/'+postId}>
+                  <a>
                     <div className="program_content_main_kv_writing">
                       <p className=" font20_2">{index_cover.title}</p>
                     </div>
