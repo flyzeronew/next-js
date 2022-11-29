@@ -5,6 +5,8 @@ import Navber from '../comps/Navber'
 import Link from "next/link"
 
 export default function Post(props) {
+  const router = useRouter();
+  const Id=router.query.Post;
   const menu = props.menu;
   const portal_menu = props.portal_menu;
   const index_cover = props.index_cover[0];
@@ -17,6 +19,7 @@ export default function Post(props) {
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
     <div className="container">
+
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -24,7 +27,6 @@ export default function Post(props) {
         <meta name="description" content="網頁敘述，網頁敘述" />
       </Head>
       <Navber menu={menu} portal_menu={portal_menu} />
-
       <div id="back">
         <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
       </div>
@@ -33,14 +35,14 @@ export default function Post(props) {
         <div className="program_content_main">
           <div className="program_content_main_kv_box">
             <div className="program_content_main_kv">
-                <Link href="##" >
-                  <a>
+                <Link href={index_cover.url ? index_cover.url:'/'+router.query.Post}>
+                  <a target="_blank">
                     <div className="program_content_main_kv_writing">
-                      <p className=" font20_2">2.女人我最大招募女孩軍團囉~ 對時尚有興趣嗎?想與達人老師學習最新的時尚資訊？</p>
+                      <p className=" font20_2">{index_cover.title}</p>
                     </div>
                     <div className="img">
-                      <div className="mask"></div>                                               
-                      <img src={index_cover.cover_image} alt="img"/>
+                      <div className="mask"></div> 
+                        <img src={index_cover.cover_image} alt="img"/>
                     </div>                    
                   </a>
                 </Link>
@@ -73,7 +75,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
@@ -83,7 +85,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
@@ -93,7 +95,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
@@ -103,7 +105,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
@@ -113,7 +115,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
@@ -123,7 +125,7 @@ export default function Post(props) {
                 <li>
                   <Link href="https://www.tvbs.com.tw/">
                     <a>
-                      <div class="program_content_main_information2_img">                    
+                      <div className="program_content_main_information2_img">                    
                         <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
                       </div>                      
                       <p className="font20_3">1.女人我最大商品資訊女人我最大商品資訊女人我最大商品資訊</p>
