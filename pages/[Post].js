@@ -39,8 +39,8 @@ export default function Post(props) {
                       <p className=" font20_2">2.女人我最大招募女孩軍團囉~ 對時尚有興趣嗎?想與達人老師學習最新的時尚資訊？</p>
                     </div>
                     <div className="img">
-                      <div className="mask"></div>                       
-                        <Image src={index_cover.cover_image} alt="img" width={850} height={470} />
+                      <div className="mask"></div>                                               
+                      <img src={index_cover.cover_image} alt="img"/>
                     </div>                    
                   </a>
                 </Link>

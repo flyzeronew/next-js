@@ -129,8 +129,10 @@ p{text-align:left;}
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-.program_content_main_kv .img{line-height:0;}
-.program_content_main_kv .img img{}
+.program_content_main_kv .img{line-height:0;width: 100%;}
+.program_content_main_kv .img img{	
+	aspect-ratio:16/9;height: auto;
+}
 /* 箭頭 */
 .program_content_main_kv_arrawL,.program_content_main_kv_arrawR{width:45px;position:absolute;top:40%; z-index:1; cursor:pointer;}
 .program_content_main_kv_arrawL{left:10px;}
