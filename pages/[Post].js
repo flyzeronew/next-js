@@ -34,18 +34,16 @@ export default function Post(props) {
       <div className="program_content">
         <div className="program_content_main">
           <div className="program_content_main_kv_box">
-            <div className="program_content_main_kv">
-                <Link href={index_cover.url ? index_cover.url:'/'+router.query.Post}>
-                  <a>
-                    <div className="program_content_main_kv_writing">
-                      <p className=" font20_2">{index_cover.title}</p>
-                    </div>
-                    <div className="img">
-                      <div className="mask"></div> 
-                        <img src={index_cover.cover_image} alt="img"/>
-                    </div>                    
-                  </a>
-                </Link>
+            <div className="program_content_main_kv">         
+                <a href={index_cover.url ? index_cover.url:'/'+router.query.Post} target={index_cover.url ? '_blank' :''} >
+                  <div className="program_content_main_kv_writing">
+                    <p className=" font20_2">{index_cover.title}</p>
+                  </div>
+                  <div className="img">
+                    <div className="mask"></div> 
+                      <img src={index_cover.cover_image} alt="img"/>
+                  </div>                    
+                </a>            
             </div>
           </div>
         </div>
