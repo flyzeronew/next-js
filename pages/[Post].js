@@ -7,6 +7,7 @@ import Link from "next/link"
 export default function Post(props) {
   const menu = props.menu;
   const portal_menu = props.portal_menu;
+  const index_cover = props.index_cover[0];
   const fb_url='https://www.facebook.com/tvbsfb';
   const iframe_fb = '<iframe title="tvbs"" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {
@@ -16,6 +17,7 @@ export default function Post(props) {
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
     <div className="container">
+      {index_cover.cover_image}
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -39,7 +41,7 @@ export default function Post(props) {
                     </div>
                     <div className="img">
                       <div className="mask"></div>                       
-                        <Image src="/kv850x470.jpg" alt="img" width={850} height={470} />
+                        <Image src={index_cover.cover_image} alt="img" width={850} height={470} />
                     </div>                    
                   </a>
                 </Link>
@@ -194,12 +196,15 @@ export default function Post(props) {
 Post.getInitialProps = async (i) => {
   if (!i.req) { return { menu: [] }; } //防呆
   const { query } = i;
-  const res1 = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=' + query.Post);
-  const res2 = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/portal_menu');
-  const menu = await res1.json();
-  const portal_menu = await res2.json();
+  const res_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=' + query.Post);
+  const res_portal_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/portal_menu');
+  const res_index_cover = await fetch('https://tvbsapp.tvbs.com.tw/program_api/index_cover?id='+ query.Post);
+  const menu = await res_menu.json();
+  const portal_menu = await res_portal_menu.json();
+  const index_cover = await res_index_cover.json();
   return {
     menu: menu,
-    portal_menu: portal_menu.portal_menu
+    portal_menu: portal_menu.portal_menu,
+    index_cover: index_cover.data
   };
 }
