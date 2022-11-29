@@ -17,7 +17,6 @@ export default function Post(props) {
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
     <div className="container">
-      {index_cover.cover_image}
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
