@@ -36,7 +36,7 @@ export default function Post(props) {
           <div className="program_content_main_kv_box">
             <div className="program_content_main_kv">
                 <Link href={index_cover.url ? index_cover.url:'/'+router.query.Post}>
-                  <a target="_blank">
+                  <a>
                     <div className="program_content_main_kv_writing">
                       <p className=" font20_2">{index_cover.title}</p>
                     </div>
