@@ -192,7 +192,7 @@ export default function Post(props) {
     </div>
   )
 }
-Post.getInitialProps = async (i) => {
+Post.getServerSideProps = async (i) => {
   if (!i.req) { return { menu: [] }; } //防呆
   const { query } = i;
   const res_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=' + query.Post);
