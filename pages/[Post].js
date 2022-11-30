@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Navber from '../comps/Navber'
 import Link from "next/link"
 
+
 export default function Post(props) {
   const postId=props.postId;
   const menu = props.menu;
@@ -15,8 +16,8 @@ export default function Post(props) {
   const fb_url=social.facebook;
   const wonderful_list=props.wonderful_list;
   const related_news=props.related_news;
-  
-  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=418&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="418" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
+
+  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
   //return <pre>{JSON.stringify(menu,null,4)}</pre> 印資料
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
@@ -44,7 +45,7 @@ export default function Post(props) {
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
-                      <img src={kv.cover_image} alt="img" width={850} height={470}/>                     
+                      <Image src={kv.cover_image} alt="img" width={850} height={478}/>                     
                   </div>                    
                 </a>           
             </div>
@@ -78,9 +79,10 @@ export default function Post(props) {
                     <Link href={postId+"/detail/"+val.id}>
                       <a>
                         <div className="program_content_main_information2_img">                    
-                          <img src={val.cover_image} alt="img" width={850} height={470} />
+                          <Image src={val.cover_image} alt="img" width={850} height={478} />
                         </div>                      
                         <p className="font20_3">{val.title}</p>
+                        
                       </a>
                     </Link>
                   </li>
@@ -101,7 +103,7 @@ export default function Post(props) {
 
           <div className="program_content_main_information_one">
             <div className="program_content_main_information_one_img1">
-              <Image src={program_info.image} alt="img" width={850} height={470} />
+              <Image src={program_info.image} alt="img" width={850} height={478} />
             </div>
             <div className="program_content_main_information_one_p1" dangerouslySetInnerHTML={{__html: program_info.content}}></div>
           </div>
@@ -122,7 +124,7 @@ export default function Post(props) {
                         <a>
                           <div className="program_content_right_activity_img2"> 
                             <div className="mask"></div>                   
-                            <Image src={val.news_img} alt="img" width={850} height={470} />
+                            <Image src={val.news_img} alt="img" width={850} height={478} />
                           </div>  
                           <p className="font18_1">{val.news_title}</p>                    
                         </a>
@@ -135,8 +137,7 @@ export default function Post(props) {
           </div>
         </div>
       </div>
-
-    </div>
+    </div>    
   )
 }
 Post.getInitialProps = async (i) => {
