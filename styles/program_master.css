@@ -31,7 +31,7 @@ p{text-align:left;}
 }
 
 /* 節目官網主架構 */	
-.program_container {margin: 0 auto;padding: 0;}
+.program_container {margin: 0 auto;padding: 0;background-color:#fff;}
 
 /* 按鈕列總包------------------------------------------------------------------------------------------------------ */
 /* 按鈕列底 */
@@ -505,7 +505,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /*2欄ed*/
 
 /*3欄*/
-.program_content_main_information2 li{width:100%; margin-right:0px; height:150px;}
+.program_content_main_information2 li{width:100%; margin-right:0px;}
 .program_content_main_information2_img{float:left;width:250px;margin-right:10px;}
 .program_content_main_information2 li p{float:none;width:auto;}
 /*3欄ed*/
@@ -601,7 +601,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 .program_content_main_information_img{height:auto;}
 /*2欄ed*/
 /*3欄*/
-.program_content_main_information2 li{height:90px;}
+.program_content_main_information2 li{}
 .program_content_main_information2_img{width:120px;}
 /*3欄ed*/
 /*內容共用*/
