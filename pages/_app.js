@@ -1,10 +1,11 @@
+import { useRouter } from 'next/router'
 import '../styles/globals.css'
 import '../styles/program_master.css'
 import '../styles/program_article_share.css'
 import '../styles/main.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const postId=router.query.Post;
+  return <Component {...pageProps}  postId={postId}/>
 }
-
-export default MyApp
