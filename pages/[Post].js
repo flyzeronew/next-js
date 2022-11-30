@@ -44,7 +44,7 @@ export default function Post(props) {
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
-                      <Image src={kv.cover_image} alt="img" width={850} height={470}/>                     
+                      <img src={kv.cover_image} alt="img" width={850} height={470}/>                     
                   </div>                    
                 </a>           
             </div>
@@ -78,7 +78,7 @@ export default function Post(props) {
                     <Link href={postId+"/detail/"+val.id}>
                       <a>
                         <div className="program_content_main_information2_img">                    
-                          <Image src={val.cover_image} alt="img" width={850} height={470} />
+                          <img src={val.cover_image} alt="img" width={850} height={470} />
                         </div>                      
                         <p className="font20_3">{val.title}</p>
                       </a>

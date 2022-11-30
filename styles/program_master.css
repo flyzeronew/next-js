@@ -31,7 +31,7 @@ p{text-align:left;}
 }
 
 /* 節目官網主架構 */	
-.program_container {margin: 0 auto;padding: 0;}
+.program_container {margin: 0 auto;padding: 0;background-color:#fff;}
 
 /* 按鈕列總包------------------------------------------------------------------------------------------------------ */
 /* 按鈕列底 */
@@ -129,9 +129,9 @@ p{text-align:left;}
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-.program_content_main_kv .img{line-height:0;width: 100%;}
+.program_content_main_kv .img{line-height:0;width:100%;aspect-ratio:16/9;overflow: hidden;}
 .program_content_main_kv .img img{	
-	aspect-ratio:16/9;height: auto;
+	height: auto;
 }
 /* 箭頭 */
 .program_content_main_kv_arrawL,.program_content_main_kv_arrawR{width:45px;position:absolute;top:40%; z-index:1; cursor:pointer;}
@@ -232,6 +232,8 @@ li:hover .mask{
 .program_content_main_information2 li{width:386px; margin-right:20px;display:inline-block;overflow:hidden;margin-bottom:20px;vertical-align: text-top;text-align: center;}
 .program_content_main_information2 li a:hover p{color: #933571;}
 .program_content_main_information2 li a:hover .mask{background-color: rgba(0,0,0,0.4);transition: 0.3s;}
+.program_content_main_information2_img img{height:auto;}
+.program_content_main_information2_img{aspect-ratio:16 / 9;overflow: hidden;margin-bottom:5px;}
 @media (max-width:1199px){
 	.program_content_main_information2 li{width:325px; }
 }
@@ -359,7 +361,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 @media (max-width: 850px){
 	.program_content_right_activity2{margin:0 15px;}
 	.program_content_right_activity2 ul{display:block;}
-	.program_content_right_activity2 li{overflow:hidden;margin-bottom:20px;padding-bottom:0px;}
+	.program_content_right_activity2 li{overflow:hidden;margin-bottom:15px;padding-bottom:0px;}
 	.program_content_right_activity2 li p{	
 		display: -webkit-box;
 		overflow: hidden;
@@ -505,8 +507,8 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /*2欄ed*/
 
 /*3欄*/
-.program_content_main_information2 li{width:100%; margin-right:0px;}
-.program_content_main_information2_img{float:left;width:250px;margin-right:10px;}
+.program_content_main_information2 li{width:100%; margin-right:0px;margin-bottom:15px;}
+.program_content_main_information2_img{float:left;width:250px;margin-right:10px;margin-bottom:0;}
 .program_content_main_information2 li p{float:none;width:auto;}
 /*3欄ed*/
 
@@ -558,7 +560,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /*2欄ed*/
 
 /*3欄*/
-.program_content_main_information2 li{height:auto;margin-bottom:10px;}
+.program_content_main_information2 li{height:auto;}
 .program_content_main_information2_img{width:180px;}
 /*3欄ed*/
 /*內容共用*/
