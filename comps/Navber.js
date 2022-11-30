@@ -66,7 +66,7 @@ return(
             <div className="program_header_box_hamburger">
                 
             </div>
-            <div className="program_header_titel font26_1"><a href={"/"}>{menu.program.title}</a></div>
+            <div className="program_header_titel font26_1">{menu.program.title}</div>
             <div className="program_header_nav">
                     <ul className="font20_1">
                         {
