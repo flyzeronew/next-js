@@ -7,21 +7,22 @@ import Link from "next/link"
 
 
 export default function Post(props) {
-  const postId=props.postId;
-  const menu = props.menu;
-  const portal_menu = props.portal_menu;
-  const kv = props.index_cover;
-  const social = props.social;
-  const time= props.broadcast_time;
-  const program_info=props.program_info;
-  const fb_url=social.facebook;
-  const wonderful_list=props.wonderful_list;
-  const related_news=props.related_news;
-  const footer=props.footer;
+console.log(props);
+const postId=props.postId;
+const menu = props.menu;
+const portal_menu = props.portal_menu;
+const kv = props.index_cover;
+const social = props.social;
+const time= props.broadcast_time;
+const program_info=props.program_info;
+const fb_url=social.facebook;
+const wonderful_list=props.wonderful_list;
+const related_news=props.related_news;
+const footer=props.footer;
 
-  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
+const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
-  //return <pre>{JSON.stringify(menu,null,4)}</pre> 印資料
+  //return <pre>{JSON.stringify(menu,null,4)}</pre> 
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
   return (
     <div className="container">
@@ -95,7 +96,7 @@ export default function Post(props) {
           </div>
         </div>
       </div>
-      
+
       <div className="program_content">
         <div className="program_content_main">
           <div className="program_content_main_information_titel">
@@ -144,7 +145,8 @@ export default function Post(props) {
     </div>    
   )
 }
-Post.getInitialProps = async (i) => {
+
+export async function getServerSideProps(i) {
   if (!i.req) { return { menu: [],}; } //防呆
   const { query } = i;
   const id=query.Post;
@@ -157,7 +159,7 @@ Post.getInitialProps = async (i) => {
   const res_wonderful_list = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id='+id+'&limit=6&page=0');
   const res_related_news = await fetch('https://tvbsapp.tvbs.com.tw/program_api/related_news_by_keywords?id='+id);
   const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
-  
+
   const menu = await res_menu.json();
   const portal_menu = await res_portal_menu.json();
   const index_cover = await res_index_cover.json();
@@ -167,15 +169,20 @@ Post.getInitialProps = async (i) => {
   const wonderful_list = await res_wonderful_list.json();
   const related_news = await res_related_news.json();  
   const footer = await res_footer.text();  
-  return {
-    menu: menu,
-    portal_menu: portal_menu.portal_menu,
-    index_cover: index_cover.data[0],
-    social:social.data[0],
-    broadcast_time:broadcast_time.data[0],
-    program_info:program_info.data[0],
-    wonderful_list:wonderful_list.data,
-    related_news:related_news.data.slice(0,2),
-    footer:footer
-  };
+
+  return { 
+    props:{
+      menu: menu,
+      portal_menu: portal_menu.portal_menu,
+      index_cover: index_cover.data[0],
+      social:social.data[0],
+      broadcast_time:broadcast_time.data[0],
+      program_info:program_info.data[0],
+      wonderful_list:wonderful_list.data,
+      related_news:related_news.data.slice(0,2),
+      footer:footer
+    }
+   }
 }
+
+
