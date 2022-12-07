@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Navber from '../comps/Navber'
+import Footer from '../comps/Footer'
 import Link from "next/link"
 
 
@@ -16,6 +17,7 @@ export default function Post(props) {
   const fb_url=social.facebook;
   const wonderful_list=props.wonderful_list;
   const related_news=props.related_news;
+  const footer=props.footer;
 
   const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
@@ -137,6 +139,8 @@ export default function Post(props) {
           </div>
         </div>
       </div>
+
+      <Footer footer={footer}/>
     </div>    
   )
 }
@@ -152,6 +156,7 @@ Post.getInitialProps = async (i) => {
   const res_program_info = await fetch('https://tvbsapp.tvbs.com.tw/program_api/program_info?id='+id);
   const res_wonderful_list = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id='+id+'&limit=6&page=0');
   const res_related_news = await fetch('https://tvbsapp.tvbs.com.tw/program_api/related_news_by_keywords?id='+id);
+  const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
   
   const menu = await res_menu.json();
   const portal_menu = await res_portal_menu.json();
@@ -161,7 +166,7 @@ Post.getInitialProps = async (i) => {
   const program_info = await res_program_info.json();
   const wonderful_list = await res_wonderful_list.json();
   const related_news = await res_related_news.json();  
-
+  const footer = await res_footer.text();  
   return {
     menu: menu,
     portal_menu: portal_menu.portal_menu,
@@ -170,6 +175,7 @@ Post.getInitialProps = async (i) => {
     broadcast_time:broadcast_time.data[0],
     program_info:program_info.data[0],
     wonderful_list:wonderful_list.data,
-    related_news:related_news.data.slice(0,2)   
+    related_news:related_news.data.slice(0,2),
+    footer:footer
   };
 }
