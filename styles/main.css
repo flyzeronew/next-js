@@ -296,7 +296,11 @@ nav{
     transition: right .8s ease-in-out;
     z-index: 100;
 }
-
+.nav_inner_m .aw1{
+    position: absolute;
+    top:12px;
+    right:0;
+}
 .search_page{
     position: fixed;
     z-index: 101;

@@ -5,9 +5,8 @@ import Navber from '../comps/Navber'
 import Footer from '../comps/Footer'
 import Link from "next/link"
 
-
 export default function Post(props) {
-console.log(props);
+const myJquery=props.myJquery;
 const postId=props.postId;
 const menu = props.menu;
 const portal_menu = props.portal_menu;
@@ -24,13 +23,16 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
   //return <pre>{JSON.stringify(menu,null,4)}</pre> 
   //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
+  
   return (
-    <div className="container">
+    <div className="container" onLoad={myJquery}>
+
       <Head>
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Keywords" content="關鍵字1,關鍵字2" />
-        <meta name="description" content="網頁敘述，網頁敘述" />
+        <meta name="description" content="網頁敘述，網頁敘述" />   
+     
       </Head>
       <Navber menu={menu} portal_menu={portal_menu} social={social} />
       <div id="back">
@@ -184,5 +186,3 @@ export async function getServerSideProps(i) {
     }
    }
 }
-
-
