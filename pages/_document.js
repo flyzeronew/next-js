@@ -7,6 +7,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script src="js/jquery-3.6.0.js"></script>
       </body>
     </Html>
   );
