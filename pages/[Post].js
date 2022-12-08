@@ -29,6 +29,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
 
       <Head>
         <title>My page title</title>
+        <meta http-equiv="X-Frame-Options" content="SAMEORIGIN"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Keywords" content="關鍵字1,關鍵字2" />
         <meta name="description" content="網頁敘述，網頁敘述" />   
