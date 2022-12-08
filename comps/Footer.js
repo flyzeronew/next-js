@@ -10,7 +10,7 @@ function Page(props) {
                     <div className="logo">
                         <Link href="https://www.tvbs.com.tw/">
                             <a>
-                                <Image src="https://cc.tvbs.com.tw/portal/images/logo-1.png"  width={116} height={40} />
+                                <Image src="https://cc.tvbs.com.tw/portal/images/logo-1.png"  width={116} height={40} alt="logo" />
                             </a>
                         </Link>
                     </div>
