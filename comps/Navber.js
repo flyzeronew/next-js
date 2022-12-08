@@ -9,7 +9,6 @@ function Navber (props) {
     const social=props.social;
 return(
     <>
-        <script async src="https://cse.google.com/cse.js?cx=f59bec45b33cb6c21"></script>
         <div className="google-search"><div className="gcse-search"></div></div>
         <div className="program_header">
             <div className="main_header">
