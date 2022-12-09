@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link"
 
-function Page(props) {
+export default function Page(props) {    
     const footer=props.footer;
     return (
         <>
@@ -18,10 +18,10 @@ function Page(props) {
 
                     <ul>
                         <li>
-                            <div class="service"><p>您的意見是我們前進的動力.歡迎來信或來電反映</p>
+                            <div className="service"><p>您的意見是我們前進的動力.歡迎來信或來電反映</p>
                                 <ul>            
                                     <li>意見反映：<a href="mailto:service@tvbs.com.tw">service@tvbs.com.tw</a></li>
-                                    <li>觀眾服務專線：<span class="service-hover">02-2656-1599</span></li>
+                                    <li>觀眾服務專線：<span className="service-hover">02-2656-1599</span></li>
                                 </ul>
                             </div>
                         </li>
@@ -42,4 +42,3 @@ function Page(props) {
     )
   } 
   
-  export default Page

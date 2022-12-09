@@ -8,7 +8,7 @@ function Navber (props) {
     const portal_menu=props.portal_menu;
     const social=props.social;
 return(
-    <>
+    <> 
         <div className="google-search"><div className="gcse-search"></div></div>
         <div className="program_header">
             <div className="main_header">
@@ -143,7 +143,7 @@ return(
                             : menu.data.map((v, k) => (
                                 k == 0 ?
                                     <li key={k}> 
-                                    <Link href={"/"}><a >{v.title}</a></Link>                                 
+                                    <Link href={"/"+v.parentid}><a >{v.title}</a></Link>                                 
                                     </li>
                                     :
                                     <li key={k}> 
