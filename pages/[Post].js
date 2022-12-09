@@ -18,7 +18,6 @@ const fb_url=social.facebook;
 const wonderful_list=props.wonderful_list;
 const related_news=props.related_news;
 const footer=props.footer;
-
 const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
   //return <pre>{JSON.stringify(menu,null,4)}</pre> 
@@ -26,15 +25,13 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
   
   return (
     <div className="container" onLoad={myJquery}>
-
       <Head>
-        <title>My page title</title>
+        <title>{menu.program.title+" | TVBS 官網"}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="Keywords" content="關鍵字1,關鍵字2" />
-        <meta name="description" content="網頁敘述，網頁敘述" />   
-     
+        <meta name="Keywords" content={menu.program.keywords} />
+        <meta name="description" content={menu.program.description} />        
       </Head>
-      <Navber menu={menu} portal_menu={portal_menu} social={social} />
+      <Navber menu={menu} portal_menu={portal_menu} social={social} postId={postId} />
       <div id="back">
         <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
       </div>
@@ -69,7 +66,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
               <p className="program_content_main_information_titel_p font30_1">精彩內容</p>
               <div className="program_content_main_information_titel_more">
                 <div className="more01">
-                  <Link href="https://www.tvbs.com.tw/">
+                  <Link href={postId+"/list"}>
                     <button className="font15_1">MORE</button>
                   </Link>                  
                 </div>
