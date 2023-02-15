@@ -7,6 +7,8 @@ import ReactPaginate from 'react-paginate';
 import Link from "next/link"
 
 export default function List(props) {
+
+  // 伺服器端資料
   const pageCount=props.wonderful_pages.length;
   const myJquery=props.myJquery;
   const postId=props.postId;
@@ -17,7 +19,8 @@ export default function List(props) {
   const fb_url=social.facebook;
   const footer=props.footer;  
   const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
-  
+  // 伺服器端資料ed
+
   // 客戶端動態拉資料
   const [loading, setLoading] = useState('');
   const [pageList, listData] = useState('');
@@ -40,7 +43,7 @@ export default function List(props) {
  // 客戶端動態拉資料 ed
 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
-  console.log(pageList);
+
   return (
     <> 
       <div className="container" onLoad={myJquery}>
@@ -64,8 +67,8 @@ export default function List(props) {
                     <li key={key}>
                       <Link href={postId+"/detail/"+val.id}>
                         <a>
-                          <div className="program_content_main_information2_img">                    
-                            <Image src={val.cover_image} alt="img" width={850} height={478} />
+                          <div className="program_content_main_information2_img">
+                            <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>
                           </div>                      
                           <p className="font20_3">{val.title}</p>                          
                         </a>
@@ -76,7 +79,7 @@ export default function List(props) {
                   }
                 </ul>
               </div>
-         
+
               <div className="jump_list pc_display">
                   <ReactPaginate
                     previousLabel={"上一頁"}
@@ -103,6 +106,7 @@ export default function List(props) {
     </>  
   ) 
 }
+
 export async function getServerSideProps(i) {
   if (!i.req) { return { menu: [],}; } //防呆
   const { query } = i;

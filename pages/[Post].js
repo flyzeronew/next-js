@@ -22,7 +22,7 @@ const footer=props.footer;
 const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
   //return <pre>{JSON.stringify(menu,null,4)}</pre> 
-  //return <pre>{JSON.stringify(portal_menu,null,4)}</pre>
+  // return <pre>{JSON.stringify(wonderful_list,null,4)}</pre>
   
   return (
     <div className="container" onLoad={myJquery}>
@@ -48,7 +48,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
-                      <Image src={kv.cover_image} alt="img" width={850} height={478}/>                     
+                      <Image src={kv.cover_image} alt="img" layout='fill' rel="preload"/>              
                   </div>                    
                 </a>           
             </div>
@@ -81,8 +81,8 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
                   <li key={key}>
                     <Link href={postId+"/detail/"+val.id}>
                       <a>
-                        <div className="program_content_main_information2_img">                    
-                          <Image src={val.cover_image} alt="img" width={850} height={478} />
+                        <div className="program_content_main_information2_img">                                            
+                          <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>                       
                         </div>                      
                         <p className="font20_3">{val.title}</p>
                         
@@ -105,8 +105,8 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
           </div>
 
           <div className="program_content_main_information_one">
-            <div className="program_content_main_information_one_img1">
-              <Image src={program_info.image} alt="img" width={850} height={478} />
+            <div className="program_content_main_information_one_img1">          
+              <Image src={program_info.image} alt="img" layout='fill' rel="preload"/>
             </div>
             <div className="program_content_main_information_one_p1" dangerouslySetInnerHTML={{__html: program_info.content}}></div>
           </div>
