@@ -3,12 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'cc.tvbs.com.tw',
-      },
+        hostname: 'img.youtube.com'
+      }
     ],
-  },
+  }, 
 }
 module.exports = nextConfig
