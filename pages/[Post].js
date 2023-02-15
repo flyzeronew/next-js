@@ -42,15 +42,29 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
           <div className="program_content_main_kv_box">
             <div className="program_content_main_kv">  
             {/* <Link href={kv.url ? kv.url: {pathname: '/[slug]', query: {slug:''}}} >555</Link> */}
-                <a href={kv.url ? kv.url:''}>
+            {
+              kv.cover_image ? 
+              <a href={kv.url ? kv.url:''}>
                   <div className="program_content_main_kv_writing">
-                    <p className=" font20_2">{kv.title}</p>
+                    <p className=" font20_2">{kv.title ? kv.url:''}</p>
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
                       <Image src={kv.cover_image} alt="img" layout='fill' rel="preload"/>              
                   </div>                    
-                </a>           
+                </a>
+              :
+              <a href={kv.url ? kv.url:''}>
+                    {kv.title ? 
+                    <div className="program_content_main_kv_writing">
+                      <p className=" font20_2">{kv.title ? kv.title:''}</p>
+                    </div>
+                    :''}                  
+                  <div className="img">                    
+                      <Image src={program_info.image} alt="img" layout='fill' rel="preload"/>              
+                  </div>                    
+                </a>
+            }                         
             </div>
           </div>
         </div>
