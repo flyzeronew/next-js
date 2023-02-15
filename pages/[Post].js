@@ -6,6 +6,7 @@ import Footer from '../comps/Footer'
 import Link from "next/link"
 
 export default function Post(props) {
+  console.log(props);
 const myJquery=props.myJquery;
 const postId=props.postId;
 const menu = props.menu;
@@ -122,7 +123,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
             <ul>
                 {related_news.length!=0 ? related_news.map((val, key) => (                  
                     <li key={key}>
-                      <Link href={postId+"/detail/"+val.news_id}>
+                      <Link href={val.share_url}>
                         <a>
                           <div className="program_content_right_activity_img2"> 
                             <div className="mask"></div>                   
