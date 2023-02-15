@@ -46,7 +46,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
               kv.cover_image ? 
               <a href={kv.url ? kv.url:''}>
                   <div className="program_content_main_kv_writing">
-                    <p className=" font20_2">{kv.title ? kv.url:''}</p>
+                    <p className=" font20_2">{kv.title ? kv.title:''}</p>
                   </div>
                   <div className="img">
                     <div className="mask"></div> 
