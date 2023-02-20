@@ -98,8 +98,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
                         <div className="program_content_main_information2_img">                                            
                           <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>                       
                         </div>                      
-                        <p className="font20_3">{val.title}</p>
-                        
+                        <p className="font20_3">{val.title}</p>                        
                       </a>
                     </Link>
                   </li>

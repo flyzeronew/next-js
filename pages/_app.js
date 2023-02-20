@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import App from "next/app"
 import '../styles/globals.css'
 import '../styles/program_master.css'
 import '../styles/program_article_share.css'
@@ -9,12 +10,10 @@ import $ from 'jquery';
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const postId=router.query.Post;
-  return <Component {...pageProps}  postId={postId} myJquery={myJquery}/>
-  
+  const detailId=router.query.detail;
+  return <Component {...pageProps} postId={postId} detailId={detailId} myJquery={myJquery} />  
 }
-
 function myJquery(){  
-  $(document).ready(function(){
 
     // google搜尋
     var cx = '002254347943719830775:s6buouardhq';
@@ -48,6 +47,10 @@ function myJquery(){
         }
     });
 
+    $('.keyword_btn').click(function(){
+      $('#gsc-i-id1').val($(this).val());
+      $('button.gsc-search-button').click(); 
+    });
     
     $(document).on('keyup',function(event) {
         if(event.keyCode==13) {
@@ -97,21 +100,18 @@ function myJquery(){
         }
     });
 
+    // 手機漢堡執行
     $('.ham').click(function() {
       header_go();
       $('.ham_close').fadeIn(200);
       $('.nav_inner_m').css({'right':'0'});
       $('.nav_bg').show();
-
     });
     $('.ham_close').click(function() {
         header_go();          
         $('.nav_inner_m').css({'right':'-100%'});
         $('.nav_bg').hide();
-        
-
     });
-
     $('.header_search_m .search_btn').click(function() {
           $('.header_search_m .search_page').css({right:0});
           $('.nav_bg').show();            
@@ -120,9 +120,8 @@ function myJquery(){
           $('.header_search_m .search_page').css({right:'-100%'});
           $('.nav_bg').hide();            
     });
+    // 手機漢堡執行 ed
 
-
-  });
 }
 function scrollableElement() {
   var i, len, el, $el, scrollable;
@@ -142,8 +141,6 @@ function scrollableElement() {
   }
   return [];
 }
-
-
 function header_go(){
   $('.nav_inner_m li').each(function(i) {
       $('.nav_inner_m li a').removeClass('op');
@@ -164,4 +161,6 @@ function header_go(){
       });
 
   });
+
+
 }

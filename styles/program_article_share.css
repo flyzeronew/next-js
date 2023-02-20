@@ -97,7 +97,7 @@
 .jump_list li:last-child a{border-radius:0 5px 5px 0;border-right:#dddddd solid 1px;padding:6px 14px;}
 /*跳頁列 ed*/
 /*上下頁2*/
-.jump_list_up_down2{}
+.jump_list_up_down2{margin-bottom: 10px;}
 .jump_list_up_down2 li{font-size:15px;display:inline-block;margin-bottom:10px; width:100%; overflow:hidden;}
 .jump_list_up_down2 li a{ font-size:16px;padding:0 20px;overflow:hidden;
 	display:block;padding:10px 20px;color:#000;background-color:#c8c9cb; margin-right:5px; background-image:url(../public/arraw02-L.svg); background-repeat:no-repeat; background-size:15px; background-position:1% center;

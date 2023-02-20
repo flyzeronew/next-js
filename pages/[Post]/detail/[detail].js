@@ -3,24 +3,26 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navber from '../../../comps/Navber'
 import Footer from '../../../comps/Footer'
+import Like from '../../../comps/Like'
 import Link from "next/link"
 
 export default function Page(props) {
-  const router = useRouter();
   const myJquery=props.myJquery;
   const postId=props.postId;  
-  const detailId=router.query.detail;
+  const detailId=props.detailId;  
   const portal_menu = props.portal_menu;
   const social = props.social;
   const menu = props.menu;
   const detail = props.detail;
   const time= props.broadcast_time;
   const fb_url=social.facebook;
-  const footer=props.footer;  
-  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
-  console.log(props);
-  function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
+  const prev = props.prev;
+  const next = props.next;
+  const like = props.like;
 
+  const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
+  function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
+  //return <pre>{JSON.stringify(like,null,4)}</pre>
   // 正規化取導言
   var content=detail.article_content;
   function stripHTML(input) {
@@ -39,7 +41,7 @@ export default function Page(props) {
   // 關鍵字轉換及搜尋 ed
 
   return (
-  <>
+  <>  
     <div className="container" onLoad={myJquery}>
         <Head>
           <title>{detail.title+" | "+menu.program.title+" | TVBS 官網"}</title>
@@ -53,6 +55,45 @@ export default function Page(props) {
         </div>
 
         <div className="program_content">
+          <div className="program_content_updown_page_box pc_display">
+            {/* PC版上下頁文章 */}
+            <div className="program_content_updown_page">
+                <ul>
+                    {/* <li>
+                      {prev == undefined ? "" : 
+                        <div className="program_content_updown_page_L">
+                          <div className="program_content_updown_page_arraw"></div>
+                            <div className="program_content_updown_page_context_box">
+                              <div className="program_content_updown_page_context ">
+                              <a href={prev.id}>
+                                  <div className="program_content_updown_page_context-img"><img src={prev.cover_image} alt='img'/></div>
+                                  <p className="font18_1">{prev.title}</p>
+                                </a>
+                            </div>
+                          </div>
+                        </div>  
+                      }
+                    </li>
+                    <li>
+                      {next == undefined ? "" : 
+                        <div className="program_content_updown_page_L">
+                          <div className="program_content_updown_page_arraw"></div>
+                            <div className="program_content_updown_page_context_box">
+                              <div className="program_content_updown_page_context ">
+                              <a href={prev.id}>
+                                  <div className="program_content_updown_page_context-img"><img src={prev.cover_image} alt='img'/></div>
+                                  <p className="font18_1">{prev.title}</p>
+                                </a>
+                            </div>
+                          </div>
+                        </div>  
+                      }
+                    </li> */}
+                </ul>
+            </div>
+            {/* PC版上下頁文章 ed*/}
+            
+          </div>
           <div className="program_content_main">
             <div className="program_content_main_detail">
                 <div className="program_content_main_detail_titel font26_2">{detail.title}</div>
@@ -97,6 +138,30 @@ export default function Page(props) {
                     </div>
                   </div>
                 </div>
+
+                <div class="jump_list_up_down2 text_center mobile_display">
+                  <ul>
+                      
+                      <li>
+                        {prev == undefined ? "" :
+                          <a href={prev.id}><p class="float_left">{prev.title}</p></a>
+                        }
+                      </li>                     
+                      <li>
+                        {next == undefined ? "" :
+                          <a href={next.id}><p class="float_left">{next.title}</p></a>
+                        }
+                      </li>
+                  </ul>
+                </div>
+
+                <Like like={like} postId={postId}/>
+                
+
+                <div className="program_content_right_fb_box">
+                  <div id="fb-root"></div>                
+                  <div class="fb-comments" data-href={detailId} data-width="100%" data-numposts="5"></div>
+              </div>
             </div>
           </div>
           <div className="program_content_right">
@@ -105,13 +170,14 @@ export default function Page(props) {
           </div>
         </div>
     </div>
-  </>)
+  </>    
+  )
 }
 export async function getServerSideProps(i) {
   if (!i.req) { return { menu: [],}; } //防呆
   const { query } = i;
-  const id=query.Post;
-  const id2=query.detail;
+  const id=query.Post;//節目ID
+  const id2=query.detail;//新聞ID
   const res_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id='+id);
   const res_portal_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/portal_menu');
   const res_index_cover = await fetch('https://tvbsapp.tvbs.com.tw/program_api/index_cover?id='+id);
@@ -121,7 +187,11 @@ export async function getServerSideProps(i) {
   const res_wonderful_list = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id='+id+'&limit=6&page=0');
   const res_related_news = await fetch('https://tvbsapp.tvbs.com.tw/program_api/related_news_by_keywords?id='+id);
   const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
-  const res_detail = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_detail?id='+id2);  
+  const res_detail = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_detail?id='+id2);
+  const res_prev = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=st&id='+id2);
+  const res_next = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=st&id='+id2);  
+  const kw = await res_detail.keyword;
+  const res_like = await fetch('https://tvbsapp.tvbs.com.tw/program_api/umightlike_article?tbl=6&keywords='+kw+'&id='+id2);  
 
   const menu = await res_menu.json();
   const portal_menu = await res_portal_menu.json();
@@ -132,7 +202,11 @@ export async function getServerSideProps(i) {
   const wonderful_list = await res_wonderful_list.json();
   const related_news = await res_related_news.json();  
   const footer = await res_footer.text();  
-  const detail = await res_detail.json();  
+  const detail = await res_detail.json();
+  const prev = await res_prev.json();
+  const next = await res_next.json();
+  const like = await res_like.json();  
+
 
   return { 
     props:{
@@ -145,7 +219,10 @@ export async function getServerSideProps(i) {
       wonderful_list:wonderful_list.data,
       related_news:related_news.data.slice(0,2),
       footer:footer,
-      detail:detail.data[0]
+      detail:detail.data[0],
+      prev:prev.data[0],
+      next:next.data[0],
+      like:like,
     }
    }
 }
