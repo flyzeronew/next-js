@@ -15,6 +15,25 @@ export default function MyApp({ Component, pageProps }) {
 }
 function myJquery(){  
 
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {     
+    window.FB.init({
+    appId            : '1662762424018052',
+    autoLogAppEvents : true,
+    xfbml            : true,
+    version          : 'v2.9'
+  });
+  window.FB.AppEvents.logPageView();
+  };  
+  
+
     // google搜尋
     var cx = '002254347943719830775:s6buouardhq';
     var gcse = document.createElement('script');

@@ -158,10 +158,10 @@ export default function Page(props) {
                 <Like like={like} postId={postId}/>
                 
 
-                <div className="program_content_right_fb_box">
+                <div className="program_content_fb_box">
                   <div id="fb-root"></div>                
-                  <div class="fb-comments" data-href={detailId} data-width="100%" data-numposts="5"></div>
-              </div>
+                  <div class="fb-comments" data-href={detailId} data-width="100%" data-numposts="2"></div>
+                </div>
             </div>
           </div>
           <div className="program_content_right">
