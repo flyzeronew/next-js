@@ -283,7 +283,7 @@ li:hover .mask{
 
 
 /* 網頁內容ed*/
-
+.program_content_fb_box{}
 /* 網頁內容包中間 ed */
 
 /* 網頁內容包右邊 */
@@ -414,7 +414,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /* 標籤連結 ed */
 
 /* 你可能也會喜歡 */
-.program_content_main_detail_like{overflow:hidden;}
+.program_content_main_detail_like{overflow:hidden;margin-bottom: 20px;}
 .program_content_main_detail_like_titel{border-bottom:#c8c9cb 3px solid;padding-bottom:2px; font-weight:bolder; margin-bottom:20px;}
 /* 你可能也會喜歡ed */
 
@@ -645,11 +645,11 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /* 內頁用社群跟著跑 */
 .program_content_community_list_box{position:absolute; left:-70px;}
 .program_content_community_list{position:fixed;top:0; display:none;}
-.program_content_community_list li{width:50px; margin-bottom:10px;}
+.program_content_community_list li{width:50px;height:50px; margin-bottom:10px;position:relative;cursor: pointer;}
 @media (max-width: 1366px){.program_content_community_list_box{display:none;}}
 /* 手機版 */
 .program_content_community_list_mobile{ width:100%; position:fixed;left:0;top:0;background-color: rgba(0,0,0,0.5); padding:8px; z-index:2;}
-.program_content_community_list_mobile li{width:45px; margin-right:8px; display:inline-block;}
+.program_content_community_list_mobile li{width:45px;height:45px; margin-right:8px; display:inline-block;position:relative;cursor: pointer;}
 /* 手機版 ed */
 /* 內頁用社群跟著跑ed */
 

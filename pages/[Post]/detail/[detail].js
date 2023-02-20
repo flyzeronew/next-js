@@ -22,7 +22,7 @@ export default function Page(props) {
 
   const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/page.php?href='+fb_url+'&tabs=timeline&width=328&height=427&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=690035817779098" width="328" height="427" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'; 
   function Iframe(props) {return (<div dangerouslySetInnerHTML={{__html:  props.iframe?props.iframe:""}} />);}
-  //return <pre>{JSON.stringify(like,null,4)}</pre>
+  //return <pre>{JSON.stringify(menu,null,4)}</pre>
   // 正規化取導言
   var content=detail.article_content;
   function stripHTML(input) {
@@ -92,8 +92,50 @@ export default function Page(props) {
                 </ul>
             </div>
             {/* PC版上下頁文章 ed*/}
-            
           </div>
+
+          {/* 內頁用社群跟著跑 */}          
+          <div className="program_content_community_list_box">
+              <div className="program_content_community_list">
+                <ul>          
+                    {
+                      menu.program.facebook=="" ? "" :                             
+                      <li>
+                        <Link href={menu.program.facebook} target="_blank">                          
+                            <Image src="/content_community_list_facebook.svg" alt="img" layout='fill' rel="preload"/>                          
+                        </Link>                        
+                      </li>
+                    }
+                      <li>
+                        <Link href="#fb_bottom">                       
+                            <Image src="/content_community_list_talk.svg" alt="img" layout='fill' rel="preload"/>                       
+                        </Link>
+                      </li>                
+                </ul>
+              </div>
+          </div>
+
+          {/* 手機板 */}
+          <div class="program_content_community_list_mobile text_center mobile_display">
+              <ul>          
+                  {
+                    menu.program.facebook=="" ? "" :                             
+                    <li>
+                      <Link href={menu.program.facebook} target="_blank">                          
+                          <Image src="/content_community_list_facebook.svg" alt="img" layout='fill' rel="preload"/>                          
+                      </Link>                        
+                    </li>
+                  }
+                    <li>
+                      <Link href="#fb_bottom">                       
+                          <Image src="/content_community_list_talk.svg" alt="img" layout='fill' rel="preload"/>                       
+                      </Link>
+                    </li>                
+              </ul>
+          </div>
+          {/* 手機板 ed*/}
+        {/* 內頁用社群跟著跑 ed*/}
+
           <div className="program_content_main">
             <div className="program_content_main_detail">
                 <div className="program_content_main_detail_titel font26_2">{detail.title}</div>
@@ -131,8 +173,8 @@ export default function Page(props) {
                           {
                           menu.program.youtube=="" ? "" :                            
                           <li className="font16_2">
-                          <Link href={menu.program.youtube} target="_blank">訂閱</Link>
-                        </li>
+                            <Link href={menu.program.youtube} target="_blank">訂閱</Link>
+                          </li>
                         }
                       </ul>
                     </div>
@@ -144,12 +186,16 @@ export default function Page(props) {
                       
                       <li>
                         {prev == undefined ? "" :
-                          <a href={prev.id}><p class="float_left">{prev.title}</p></a>
+                          <Link href={prev.id}>
+                            <a><p class="float_left">{prev.title}</p></a>
+                          </Link>
                         }
                       </li>                     
                       <li>
                         {next == undefined ? "" :
-                          <a href={next.id}><p class="float_left">{next.title}</p></a>
+                          <Link href={next.id}>
+                            <a><p class="float_left">{next.title}</p></a>
+                          </Link>
                         }
                       </li>
                   </ul>
@@ -158,7 +204,7 @@ export default function Page(props) {
                 <Like like={like} postId={postId}/>
                 
 
-                <div className="program_content_fb_box">
+                <div className="program_content_fb_box" id="fb_bottom">
                   <div id="fb-root"></div>                
                   <div class="fb-comments" data-href={detailId} data-width="100%" data-numposts="2"></div>
                 </div>
