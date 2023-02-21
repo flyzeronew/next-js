@@ -59,36 +59,40 @@ export default function Page(props) {
             {/* PC版上下頁文章 */}
             <div className="program_content_updown_page">
                 <ul>
-                    {/* <li>
+                    <li>
                       {prev == undefined ? "" : 
-                        <div className="program_content_updown_page_L">
-                          <div className="program_content_updown_page_arraw"></div>
-                            <div className="program_content_updown_page_context_box">
-                              <div className="program_content_updown_page_context ">
-                              <a href={prev.id}>
-                                  <div className="program_content_updown_page_context-img"><img src={prev.cover_image} alt='img'/></div>
+                        <div className="updown_page_L">
+                          <div className="updown_page_arraw"></div>                    
+                            <div className="updown_page_context">
+                              <Link href={"/"+postId+"/detail/"+prev.id}>
+                                <a>
+                                  <div className="img">
+                                    <Image src={prev.cover_image} alt="img" layout='fill' rel="preload"/>
+                                  </div>
                                   <p className="font18_1">{prev.title}</p>
                                 </a>
+                              </Link>
                             </div>
-                          </div>
                         </div>  
                       }
                     </li>
                     <li>
                       {next == undefined ? "" : 
-                        <div className="program_content_updown_page_L">
-                          <div className="program_content_updown_page_arraw"></div>
-                            <div className="program_content_updown_page_context_box">
-                              <div className="program_content_updown_page_context ">
-                              <a href={prev.id}>
-                                  <div className="program_content_updown_page_context-img"><img src={prev.cover_image} alt='img'/></div>
-                                  <p className="font18_1">{prev.title}</p>
-                                </a>
-                            </div>
+                        <div className="updown_page_R">
+                          <div className="updown_page_arraw"></div>
+                          <div className="updown_page_context">                            
+                            <Link href={"/"+postId+"/detail/"+next.id}>
+                              <a>
+                                <div className="img">                             
+                                  <Image src={next.cover_image} alt="img" layout='fill' rel="preload"/>
+                                </div>
+                                <p className="font18_1">{next.title}</p>
+                              </a>
+                              </Link>
                           </div>
                         </div>  
                       }
-                    </li> */}
+                    </li>
                 </ul>
             </div>
             {/* PC版上下頁文章 ed*/}
@@ -101,13 +105,13 @@ export default function Page(props) {
                     {
                       menu.program.facebook=="" ? "" :                             
                       <li>
-                        <Link href={menu.program.facebook} target="_blank">                          
-                            <Image src="/content_community_list_facebook.svg" alt="img" layout='fill' rel="preload"/>                          
-                        </Link>                        
+                        <Link href={menu.program.facebook} target="_blank">
+                            <Image src="/content_community_list_facebook.svg" alt="img" layout='fill' rel="preload"/>
+                        </Link>
                       </li>
                     }
                       <li>
-                        <Link href="#fb_bottom">                       
+                        <Link href="#fb_bottom">
                             <Image src="/content_community_list_talk.svg" alt="img" layout='fill' rel="preload"/>                       
                         </Link>
                       </li>                
@@ -201,8 +205,7 @@ export default function Page(props) {
                   </ul>
                 </div>
 
-                <Like like={like} postId={postId}/>
-                
+                <Like like={like} postId={postId}/>                
 
                 <div className="program_content_fb_box" id="fb_bottom">
                   <div id="fb-root"></div>                
@@ -235,7 +238,7 @@ export async function getServerSideProps(i) {
   const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
   const res_detail = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_detail?id='+id2);
   const res_prev = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=st&id='+id2);
-  const res_next = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=st&id='+id2);  
+  const res_next = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=gt&id='+id2);  
   const kw = await res_detail.keyword;
   const res_like = await fetch('https://tvbsapp.tvbs.com.tw/program_api/umightlike_article?tbl=6&keywords='+kw+'&id='+id2);  
 

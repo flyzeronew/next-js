@@ -86,7 +86,20 @@ function myJquery(){
         }
     });
     // google搜尋 ed
-    
+    // /*內頁上下頁控制*/   
+      $(".updown_page_L").mouseover(function(){
+        $(".updown_page_L").find(".updown_page_context").fadeIn(100);      
+      });
+      $(".updown_page_L").mouseleave(function(){
+        $(".updown_page_context").hide();   
+      });
+      $(".updown_page_R").mouseover(function(){
+        $(".updown_page_R").find(".updown_page_context").fadeIn(100);      
+      });
+      $(".updown_page_R").mouseleave(function(){
+        $(".updown_page_context").hide();   
+      });    
+    // /*內頁上下頁控制 ed*/
     // 社群跟著跑
     $(window).scroll(function(){object_scroll(); });
     var header_h=$('.program_header').outerHeight(true);
