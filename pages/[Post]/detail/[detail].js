@@ -191,14 +191,14 @@ export default function Page(props) {
                       
                       <li>
                         {prev == undefined ? "" :
-                          <Link href={prev.id}>
+                          <Link href={"/"+postId+"/detail/"+prev.id}>
                             <a><p class="float_left">{prev.title}</p></a>
                           </Link>
                         }
                       </li>                     
                       <li>
                         {next == undefined ? "" :
-                          <Link href={next.id}>
+                          <Link href={"/"+postId+"/detail/"+next.id}>
                             <a><p class="float_left">{next.title}</p></a>
                           </Link>
                         }
