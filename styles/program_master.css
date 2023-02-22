@@ -39,7 +39,9 @@ p{text-align:left;}
 @media (max-width: 1199px){
 	.program_header{width:100%;}
 }
-
+@media (max-width: 767px){
+	.program_header{margin-bottom:0;}
+}
 /* 按鈕列底 ed*/
 
 /* 共用框 */
@@ -95,7 +97,7 @@ p{text-align:left;}
 /* 社群按鈕 ed */
 
 /* 手機版按鈕 */
-.program_header_arraw{width:20px;float:right;margin:12px; cursor:pointer; display:none;}
+.program_header_arraw{width:20px;height:20px;float:right;margin:12px; cursor:pointer; display:none;}
 /* 手機版按鈕 ed */
 
 /* 按鈕列總包ed------------------------------------------------------------------------------------------------------- */
@@ -452,7 +454,9 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 .program_content_right_fb_box{display:none;}
 .program_content_right_ad_box{display:none;}
 
-
+@media (max-width: 767px){
+	.program_content_right{margin-bottom:0px;}
+}
 .program_content_right_activity{margin:0 10px;text-align:center;}
 .program_content_right_activity li{width:250px; margin-right:20px; height:280px; display:inline-block;overflow:hidden;margin-bottom:5px;}
 .program_content_right_activity li:last-child{margin-right:0;}
@@ -484,6 +488,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 @media (max-width: 767px){
 	.header_inner,.program_header_box,.program_ad_box,.program_content,.program_content2,.program_content3,.program_content3_box{width:100%;}
 	.program_content_main{width:100%;margin:0 auto;}
+	.program_header_box{display:flex;justify-content: space-between;align-items: center;}
 }
 @media (max-width: 960px){
 /* 主視覺 kv */

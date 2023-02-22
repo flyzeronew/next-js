@@ -177,10 +177,12 @@ function myJquery(){
       $('.program_header_arraw').click(function(){         
         if(op==0){
           op++;
+          $('.program_header_box').css({'border-bottom':'#fa67b6 1px dashed'});
           $('.program_header_arraw').css({transform:'rotate(90deg)',transition:'0.3s'});
           $('.ham_box').show();
         }else{
           op=0;
+          $('.program_header_box').css({'border-bottom':'#933571 1px dashed'});
           $('.program_header_arraw').css({transform:'rotate(0deg)',transition:'0.3s'});
           $('.ham_box').hide();
         }
