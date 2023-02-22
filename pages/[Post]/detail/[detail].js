@@ -56,7 +56,7 @@ export default function Page(props) {
         </div>
 
         <div className="program_content top10">
-          <div className="program_content_updown_page_box pc_display">
+          <div className="program_content_updown_page_box">
             {/* PC版上下頁文章 */}
             <div className="program_content_updown_page">
                 <ul>
@@ -143,7 +143,7 @@ export default function Page(props) {
 
           <div className="program_content_main">
             <div className="program_content_main_detail">
-                <div className="program_content_main_detail_titel font26_2">{detail.title}</div>
+                <div className="program_content_main_detail_titel">{detail.title}</div>
                 <div className="program_content_main_detail_time"><p className="font16_5">{detail.publish}</p></div>
                 <div className="program_content_main_detail_context">
                   <div dangerouslySetInnerHTML={ {__html:detail.article_content}} />             

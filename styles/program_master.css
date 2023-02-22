@@ -632,7 +632,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 }
 /* RWD響應式在下面----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ed*/	
 /* PC上下頁文章 */
-.program_content_updown_page_box{position:absolute;left:-120px;z-index:2;}
+.program_content_updown_page_box{position:absolute;left:-120px;z-index:2;display:none;}
 .program_content_updown_page{position:fixed; width:1200px;}
 .program_content_updown_page ul{position:relative;display:flex;justify-content:space-between;}
 .program_content_updown_page li{
