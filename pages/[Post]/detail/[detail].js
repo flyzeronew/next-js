@@ -16,6 +16,7 @@ export default function Page(props) {
   const detail = props.detail;
   const time= props.broadcast_time;
   const fb_url=social.facebook;
+  const footer=props.footer;
   const prev = props.prev;
   const next = props.next;
   const like = props.like;
@@ -218,6 +219,7 @@ export default function Page(props) {
             <div className="program_content_right_fb_box"><Iframe iframe={iframe_fb}/></div>
           </div>
         </div>
+        <Footer footer={footer}/>
     </div>
   </>    
   )
