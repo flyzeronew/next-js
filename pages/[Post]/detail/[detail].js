@@ -79,8 +79,7 @@ export default function Page(props) {
                     </li>
                     <li>
                       {next == undefined ? "" : 
-                        <div className="updown_page_R">
-                          <div className="updown_page_arraw"></div>
+                        <div className="updown_page_R">                          
                           <div className="updown_page_context">                            
                             <Link href={"/"+postId+"/detail/"+next.id}>
                               <a>
@@ -91,6 +90,7 @@ export default function Page(props) {
                               </a>
                               </Link>
                           </div>
+                          <div className="updown_page_arraw"></div>
                         </div>  
                       }
                     </li>
