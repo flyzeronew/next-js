@@ -59,8 +59,11 @@ p{text-align:left;}
 .program_header_box_hamburger{width:100%;top:51px;position:absolute;z-index:2; box-shadow: rgba(0,0,0,0.6) 0px 1px 2px;}
 .ham_box{background-color:#933571;overflow:hidden;display:none;}
 .program_header_box_hamburger1 li{border-bottom:#fa67b6 1px dashed;}
-.program_header_box_hamburger1 li a{display:block;padding:10px 20px;}.program_header_box_hamburger1 li a:hover{background-color:#db0277;}
-
+.program_header_box_hamburger1 li a{display:block;padding:10px 20px;}
+.program_header_box_hamburger1 li a:hover{background-color:#db0277;}
+@media (max-width:1023px){
+	.program_header_box_hamburger1 li a{font-size: 16px;}
+}
 /* 手機版漢堡子選單 */
 .program_header_box_hamburger1_child{background-color:#db0277;border-top:#fa67b6 1px dashed;padding:10px;display:none;}
 .program_header_box_hamburger1_child ul{}

@@ -183,13 +183,18 @@ function myJquery(){
           $('.program_header_arraw').css({transform:'rotate(90deg)',transition:'0.3s'});
           $('.ham_box').show();
         }else{
-          op=0;
-          $('.program_header_box').css({'border-bottom':'#933571 1px dashed'});
-          $('.program_header_arraw').css({transform:'rotate(0deg)',transition:'0.3s'});
-          $('.ham_box').hide();
-        }
-          
-      });    
+          reset();
+        }          
+      });  
+      $('.program_header').mouseleave(function(){reset();}); 
+      $(window).scroll(function(){reset();});
+      $(window).resize(function(){if($(window).width()>1024){reset();}});
+      function reset(){
+        op=0;
+        $('.program_header_box').css({'border-bottom':'#933571 1px dashed'});
+        $('.program_header_arraw').css({transform:'rotate(0deg)',transition:'0.3s'});
+        $('.ham_box').hide();
+      }
       // 箭頭漢堡ed
     });
     // 手機漢堡執行 ed
