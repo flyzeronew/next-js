@@ -53,7 +53,7 @@ export default function List(props) {
           <meta name="Keywords" content={menu.program.keywords} />
           <meta name="description" content={menu.program.description} />        
         </Head>
-        <Navber menu={menu} portal_menu={portal_menu} social={social} />
+        <Navber menu={menu} portal_menu={portal_menu} social={social}  postId={postId}/>
         <div className="program_content">
           <div className="program_content_main">
             <div className="program_content_main_information_titel">
@@ -92,6 +92,19 @@ export default function List(props) {
                     pageCount={pageCount}
                     onPageChange={handlePageClick}
                   />                      
+              </div>
+
+              <div className="jump_list mobile_display">
+                    <ReactPaginate
+                      previousLabel={"上一頁"}
+                      nextLabel={"下一頁"}                
+                      marginPagesDisplayed={0}
+                      pageRangeDisplayed={0}
+                      containerClassName={"jump_list"}
+                      activeClassName={"act"}
+                      pageCount={pageCount}
+                      onPageChange={handlePageClick}
+                    />                      
               </div>
             </div>
             
