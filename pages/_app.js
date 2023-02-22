@@ -1,29 +1,18 @@
 import { useRouter } from 'next/router'
-import App from "next/app"
 import '../styles/globals.css'
 import '../styles/program_master.css'
 import '../styles/program_article_share.css'
 import '../styles/main.css'
 import '../styles/p_footer_news.css'
 import $ from 'jquery';
-
 export default function MyApp({ Component, pageProps }) {
-
   const router = useRouter();
   const postId=router.query.Post;
   const detailId=router.query.detail;
-  const page1=pageProps;
   return <Component {...pageProps} postId={postId} detailId={detailId} myJquery={myJquery} />  
 }
 
-// App.getInitialProps = async ({ req }) => {
-// const res = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=28')
-// const json = await res.json()
-// return { menu: json.program}
-// }
-
 function myJquery(){  
-   
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}

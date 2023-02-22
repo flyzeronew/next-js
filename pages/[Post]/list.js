@@ -65,7 +65,7 @@ export default function List(props) {
                 <ul>
                   {pageList.length!=0 ? pageList.map((val, key) => (
                     <li key={key}>
-                      <Link href={postId+"/detail/"+val.id}>
+                      <Link href={"/"+postId+"/detail/"+val.id}>
                         <a>
                           <div className="program_content_main_information2_img">
                             <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>

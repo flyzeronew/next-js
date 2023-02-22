@@ -81,7 +81,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
               <p className="program_content_main_information_titel_p font30_1">精彩內容</p>
               <div className="program_content_main_information_titel_more">
                 <div className="more01">
-                  <Link href={postId+"/list"}>
+                  <Link href={"/"+postId+"/list"}>
                     <button className="font15_1">MORE</button>
                   </Link>                  
                 </div>
@@ -93,7 +93,7 @@ const iframe_fb = '<iframe title="tvbs" src="https://www.facebook.com/plugins/pa
             <ul>
                 {wonderful_list.length!=0 ? wonderful_list.map((val, key) => (
                   <li key={key}>
-                    <Link href={postId+"/detail/"+val.id}>
+                    <Link href={"/"+postId+"/detail/"+val.id}>
                       <a>
                         <div className="program_content_main_information2_img">                                            
                           <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>                       
