@@ -397,7 +397,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 .program_content_main_detail_time{background-image:url(../public/icon_time.svg); background-position:left center;background-size:15px; background-repeat:no-repeat; padding-left:22px;margin-bottom:20px;}
 .program_content_main_detail_context{}
 .program_content_main_detail_context_img{margin-bottom:20px;}
-
+.program_content_main_detail_context img{width: 100% !important;;height:auto !important;}
 .program_content_main_detail_context p{margin-bottom:20px; line-height:32px;}.program_content_main_detail_context p a{ color:#ce1a79;}
 @media (max-width: 1024px){
 	.program_content_main_detail{padding:0 15px;}
