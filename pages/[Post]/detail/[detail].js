@@ -231,12 +231,8 @@ export async function getServerSideProps(i) {
   const id2=query.detail;//新聞ID
   const res_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id='+id);
   const res_portal_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/portal_menu');
-  const res_index_cover = await fetch('https://tvbsapp.tvbs.com.tw/program_api/index_cover?id='+id);
   const res_social = await fetch('https://tvbsapp.tvbs.com.tw/program_api/social?id='+id);
   const res_broadcast_time = await fetch('https://tvbsapp.tvbs.com.tw/program_api/broadcast_time?id='+id);
-  const res_program_info = await fetch('https://tvbsapp.tvbs.com.tw/program_api/program_info?id='+id);
-  const res_wonderful_list = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id='+id+'&limit=6&page=0');
-  const res_related_news = await fetch('https://tvbsapp.tvbs.com.tw/program_api/related_news_by_keywords?id='+id);
   const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
   const res_detail = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_detail?id='+id2);
   const res_prev = await fetch('https://tvbsapp.tvbs.com.tw/program_api/next_prev_article?tbl=6&type=st&id='+id2);
@@ -246,12 +242,8 @@ export async function getServerSideProps(i) {
 
   const menu = await res_menu.json();
   const portal_menu = await res_portal_menu.json();
-  const index_cover = await res_index_cover.json();
   const social = await res_social.json();
   const broadcast_time = await res_broadcast_time.json();
-  const program_info = await res_program_info.json();
-  const wonderful_list = await res_wonderful_list.json();
-  const related_news = await res_related_news.json();  
   const footer = await res_footer.text();  
   const detail = await res_detail.json();
   const prev = await res_prev.json();
@@ -263,12 +255,8 @@ export async function getServerSideProps(i) {
     props:{
       menu: menu,
       portal_menu: portal_menu.portal_menu,
-      index_cover: index_cover.data[0],
       social:social.data[0],
       broadcast_time:broadcast_time.data[0],
-      program_info:program_info.data[0],
-      wonderful_list:wonderful_list.data,
-      related_news:related_news.data.slice(0,2),
       footer:footer,
       detail:detail.data[0],
       prev:prev.data[0],

@@ -115,7 +115,6 @@ export async function getServerSideProps(i) {
   const res_portal_menu = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/portal_menu');
   const res_social = await fetch('https://tvbsapp.tvbs.com.tw/program_api/social?id='+id);
   const res_broadcast_time = await fetch('https://tvbsapp.tvbs.com.tw/program_api/broadcast_time?id='+id);
-  const res_program_info = await fetch('https://tvbsapp.tvbs.com.tw/program_api/program_info?id='+id);
   const res_wonderful_pages = await fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_pages?id='+id);
   const res_footer = await fetch('https://www.tvbs.com.tw/portal/footer');
 
@@ -123,7 +122,6 @@ export async function getServerSideProps(i) {
   const portal_menu = await res_portal_menu.json();
   const social = await res_social.json();
   const broadcast_time = await res_broadcast_time.json();
-  const program_info = await res_program_info.json();
   const wonderful_pages = await res_wonderful_pages.json();
   const footer = await res_footer.text();  
 
@@ -132,8 +130,7 @@ export async function getServerSideProps(i) {
       menu: menu,
       portal_menu: portal_menu.portal_menu,
       social:social.data[0],
-      broadcast_time:broadcast_time.data[0],
-      program_info:program_info.data[0],
+      broadcast_time:broadcast_time.data[0], 
       wonderful_pages:wonderful_pages.data,
       footer:footer
     }

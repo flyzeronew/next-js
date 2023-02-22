@@ -1,27 +1,39 @@
 
-import React, { useState, useEffect } from 'react'
+
 export default function Page(props) {
-  const [data, setData] = useState(null)
-  const [isLoading, setLoading] = useState(false)
-console.log(data);
-  useEffect(() => {
-    setLoading(true)
-    fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id=28&limit=12&page=0')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data)
-        setLoading(false)
-      })
-  }, [])
+
+  console.log(props);
+//   const [data, setData] = useState(null)
+//   const [isLoading, setLoading] = useState(false)
+// console.log(data);
+//   useEffect(() => {
+//     setLoading(true)
+//     fetch('https://tvbsapp.tvbs.com.tw/program_api/wonderful_list?id=28&limit=12&page=0')
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setData(data)
+//         setLoading(false)
+//       })
+//   }, [])
 
 
-  return <div>1111</div>
+  return <div>
+
+  </div>
 }
-
+// export async function getServerSideProps(i) {
+//   const res = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=28')
+//   const json = await res.json()
+//   return {
+//     props:{
+//       menu:json.program,
+//     }
+//   }
+// }
 // Page.getInitialProps = async ({ req }) => {
 // const res = await fetch('https://2017tvbsapp-st.tvbs.com.tw/api3/news_program_api/menu?id=28')
 // const json = await res.json()
-// return { menu: json.program.title}
+// return { menu: json.program}
 // }
 
 // export async function getServerSideProps(i) {
