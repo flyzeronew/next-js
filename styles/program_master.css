@@ -219,6 +219,7 @@ li:hover .mask{
 	.program_content_main_information_one{display:block;}
 	.program_content_main_information_one_img1{width:100%;}
 	.program_content_main_information_one_p1{width:100%;}
+	.program_content_main_information_one_p1 p{font-size: 16px;}
 }
 /*1欄ed*/
 
@@ -369,6 +370,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 	.program_content_right_activity2 ul{display:block;}
 	.program_content_right_activity2 li{overflow:hidden;margin-bottom:15px;padding-bottom:0px;}
 	.program_content_right_activity2 li p{	
+		font-size: 16px;
 		display: -webkit-box;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -399,15 +401,19 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 /* 網頁內容包2 ed */
 /* 網頁內頁 */
 .program_content_main_detail{}
-.program_content_main_detail_titel{margin-bottom:10px;}
+.program_content_main_detail_titel{margin-bottom:10px;font-size:24px;font-weight: 800;}
 .program_content_main_detail_time{background-image:url(../public/icon_time.svg); background-position:left center;background-size:15px; background-repeat:no-repeat; padding-left:22px;margin-bottom:20px;}
 .program_content_main_detail_context{}
 .program_content_main_detail_context_img{margin-bottom:20px;}
 .program_content_main_detail_context img{width: 100% !important;;height:auto !important;}
-.program_content_main_detail_context p{margin-bottom:20px; line-height:32px;}.program_content_main_detail_context p a{ color:#ce1a79;}
+.program_content_main_detail_context p{margin-bottom:20px; line-height:32px;}
+.program_content_main_detail_context p a{ color:#ce1a79;}
 @media (max-width: 1024px){
+	.program_content_main_detail_titel{font-size:22px;}
 	.program_content_main_detail{padding:0 15px;}
+	.program_content_main_detail_context p{font-size: 16px;}
 }
+
 /* 標籤連結 */
 .program_content_main_detail_label_box{margin-bottom:20px;}
 .program_content_main_detail_label{border-bottom:#c8c9cb 1px solid; padding-bottom:10px; margin-bottom:10px; overflow:hidden;}
