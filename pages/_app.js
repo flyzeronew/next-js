@@ -110,7 +110,11 @@ function myJquery(){
     var lastScrollTop = 0;
     function object_scroll(){
         if(($(window).scrollTop()>lastScrollTop)){
+          if($(window).width()<1024){
             $('.program_content_community_list_mobile').show();
+            }else{
+                $('.program_content_community_list_mobile').hide();
+            }
         }else{
             $('.program_content_community_list_mobile').hide();
         }
@@ -186,9 +190,7 @@ function myJquery(){
           reset();
         }          
       });  
-      $('.program_header').mouseleave(function(){reset();}); 
-      $(window).scroll(function(){reset();});
-      $(window).resize(function(){if($(window).width()>1024){reset();}});
+
       function reset(){
         op=0;
         $('.program_header_box').css({'border-bottom':'#933571 1px dashed'});
