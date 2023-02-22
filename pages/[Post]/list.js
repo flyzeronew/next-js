@@ -54,23 +54,23 @@ export default function List(props) {
           <meta name="description" content={menu.program.description} />        
         </Head>
         <Navber menu={menu} portal_menu={portal_menu} social={social}  postId={postId}/>
-        <div className="program_content">
+        <div className="program_content top10">
           <div className="program_content_main">
             <div className="program_content_main_information_titel">
                 <p className="program_content_main_information_titel_p font30_1">精彩內容</p>    
                 <div className="line01"></div>
             </div>
             <div className="program_content_main_information_box1">
-              <div className="program_content_main_information">
+              <div className="program_content_list">
                 <ul>
                   {pageList.length!=0 ? pageList.map((val, key) => (
                     <li key={key}>
                       <Link href={"/"+postId+"/detail/"+val.id}>
                         <a>
-                          <div className="program_content_main_information2_img">
+                          <div className="img">
                             <Image src={val.cover_image} alt="img" layout='fill' rel="preload"/>
                           </div>                      
-                          <p className="font20_3">{val.title}</p>                          
+                          <div className="txt">{val.title}</div>                          
                         </a>
                       </Link>
                     </li>

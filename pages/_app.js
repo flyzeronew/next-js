@@ -99,16 +99,18 @@ function myJquery(){
       });    
     // /*內頁上下頁控制 ed*/
     // 社群跟著跑
-    $(window).scroll(function(){object_scroll(); });
+    $(window).scroll(function(){
+      if ($(window).scrollTop()>50){
+        object_scroll();             
+      }else{
+        $('.program_content_community_list_mobile').hide();    
+      }  
+    });
     var header_h=$('.program_header').outerHeight(true);
     var lastScrollTop = 0;
     function object_scroll(){
         if(($(window).scrollTop()>lastScrollTop)){
-            if($(window).width()<1024){
-                $('.program_content_community_list_mobile').show();
-            }else{
-                $('.program_content_community_list_mobile').hide();
-            }
+            $('.program_content_community_list_mobile').show();
         }else{
             $('.program_content_community_list_mobile').hide();
         }

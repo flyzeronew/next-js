@@ -55,7 +55,7 @@ export default function Page(props) {
           <div id="back-img1"><Image src="/gotop.png" alt="arraw" width={50} height={50} /></div>
         </div>
 
-        <div className="program_content">
+        <div className="program_content top10">
           <div className="program_content_updown_page_box pc_display">
             {/* PC版上下頁文章 */}
             <div className="program_content_updown_page">
@@ -121,7 +121,7 @@ export default function Page(props) {
           </div>
 
           {/* 手機板 */}
-          <div class="program_content_community_list_mobile text_center mobile_display">
+          <div class="program_content_community_list_mobile text_center">
               <ul>          
                   {
                     menu.program.facebook=="" ? "" :                             
