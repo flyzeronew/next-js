@@ -172,17 +172,19 @@ function myJquery(){
             $('.nav_bg').hide();            
       });
 
-      // 箭頭漢堡
-      $('.program_header_arraw').click(function(){
-          $(this).toggleClass('open1');            
-          if($(this).hasClass('open1')){
-            console.log('sss');
-              $(this).css({transform:'rotate(90deg)',transition:'0.3s'});
-              $('.ham_box').show();
-          }else{            
-              $(this).css({transform:'rotate(0deg)',transition:'0.3s'});      
-              $('.ham_box').hide();         
-          }     
+      // 箭頭漢堡     
+      var op=0;
+      $('.program_header_arraw').click(function(){         
+        if(op==0){
+          op++;
+          $('.program_header_arraw').css({transform:'rotate(90deg)',transition:'0.3s'});
+          $('.ham_box').show();
+        }else{
+          op=0;
+          $('.program_header_arraw').css({transform:'rotate(0deg)',transition:'0.3s'});
+          $('.ham_box').hide();
+        }
+          
       });    
       // 箭頭漢堡ed
     });
