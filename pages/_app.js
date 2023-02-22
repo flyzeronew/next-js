@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} postId={postId} detailId={detailId} myJquery={myJquery} />  
 }
 function myJquery(){  
-
+   
   (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}
@@ -45,7 +45,7 @@ function myJquery(){
     $('#search_button_mobile').click(function(){ 
         $('button.gsc-search-button').click(); 
     }); 
-
+ 
     $("body").on('keyup','#search',function(){
         if($(this).val()!='') {
             $('#gsc-i-id1').val( $(this).val() );
@@ -152,36 +152,41 @@ function myJquery(){
       });
     // 呼叫gotop ed
 
-    $('.program_header_arraw').click(function(){
-        $(this).toggleClass('open1');            
-        if($(this).hasClass('open1')){
-          $(this).css({transform:'rotate(90deg)',transition:'0.3s'});
-          $('.ham_box').show();
-        }else{   
-          $(this).css({transform:'rotate(0deg)',transition:'0.3s'});
-          $('.ham_box').hide();   
-        }
-    });
-
     // 手機漢堡執行
-    $('.ham').click(function() {
-      header_go();
-      $('.ham_close').fadeIn(200);
-      $('.nav_inner_m').css({'right':'0'});
-      $('.nav_bg').show();
-    });
-    $('.ham_close').click(function() {
-        header_go();          
-        $('.nav_inner_m').css({'right':'-100%'});
-        $('.nav_bg').hide();
-    });
-    $('.header_search_m .search_btn').click(function() {
-          $('.header_search_m .search_page').css({right:0});
-          $('.nav_bg').show();            
-    });
-    $('.header_search_m .search_close_btn').click(function() {
-          $('.header_search_m .search_page').css({right:'-100%'});
-          $('.nav_bg').hide();            
+    $(document).ready(function(){ 
+      $('.ham').click(function() {
+        header_go();
+        $('.ham_close').fadeIn(200);
+        $('.nav_inner_m').css({'right':'0'});
+        $('.nav_bg').show();
+      });
+      $('.ham_close').click(function() {
+          header_go();          
+          $('.nav_inner_m').css({'right':'-100%'});
+          $('.nav_bg').hide();
+      });
+      $('.header_search_m .search_btn').click(function() {
+            $('.header_search_m .search_page').css({right:0});
+            $('.nav_bg').show();            
+      });
+      $('.header_search_m .search_close_btn').click(function() {
+            $('.header_search_m .search_page').css({right:'-100%'});
+            $('.nav_bg').hide();            
+      });
+
+      // 箭頭漢堡
+      $('.program_header_arraw').click(function(){
+          $(this).toggleClass('open1');            
+          if($(this).hasClass('open1')){
+            console.log('sss');
+              $(this).css({transform:'rotate(90deg)',transition:'0.3s'});
+              $('.ham_box').show();
+          }else{            
+              $(this).css({transform:'rotate(0deg)',transition:'0.3s'});      
+              $('.ham_box').hide();         
+          }     
+      });    
+      // 箭頭漢堡ed
     });
     // 手機漢堡執行 ed
 
