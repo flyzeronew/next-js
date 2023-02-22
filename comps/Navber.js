@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from "next/link"
 
-
 function Navber (props) {
     const postId=props.postId;
     const menu=props.menu;
@@ -109,7 +108,7 @@ return(
                                     : menu.data.map((v, k) => (
                                         k == 0 ?
                                             <li key={k}> 
-                                            <Link href={"/"+postId}><a>{v.title}</a></Link>                                 
+                                            <Link href={"/"+v.parentid}><a>{v.title}</a></Link>                                 
                                             </li>
                                             :
                                             <li key={k}> 
@@ -135,7 +134,9 @@ return(
                         </div>
                     </div>
                 </div>
-                <div className="program_header_titel font26_1">{menu.program.title}</div>
+                <div className="program_header_titel font26_1">
+                    <Link href={"/"+postId}><a>{menu.program.title}</a></Link>
+                </div>
                 <div className="program_header_nav">
                     <ul className="font20_1">
                         {
@@ -144,7 +145,7 @@ return(
                             : menu.data.map((v, k) => (
                                 k == 0 ?
                                     <li key={k}> 
-                                    <Link href={"/"+v.parentid}><a >{v.title}</a></Link>                                 
+                                    <Link href={"/"+v.parentid}><a>{v.title}</a></Link>                                 
                                     </li>
                                     :
                                     <li key={k}> 
@@ -179,4 +180,5 @@ return(
     )
 }
 export default Navber;
+
 
