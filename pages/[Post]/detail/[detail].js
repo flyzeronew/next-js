@@ -61,16 +61,16 @@ export default function Page(props) {
             <div className="program_content_updown_page">
                 <ul>
                     <li>
-                      {prev == undefined ? "" : 
+                      {next == undefined ? "" : 
                         <div className="updown_page_L">
                           <div className="updown_page_arraw"></div>                    
                             <div className="updown_page_context">
-                              <Link href={"/"+postId+"/detail/"+prev.id}>
+                              <Link href={"/"+postId+"/detail/"+next.id}>
                                 <a>
                                   <div className="img">
-                                    <Image src={prev.cover_image} alt="img" layout='fill' rel="preload"/>
+                                    <Image src={next.cover_image} alt="img" layout='fill' rel="preload"/>
                                   </div>
-                                  <p className="font18_1">{prev.title}</p>
+                                  <p className="font18_1">{next.title}</p>
                                 </a>
                               </Link>
                             </div>
@@ -78,15 +78,15 @@ export default function Page(props) {
                       }
                     </li>
                     <li>
-                      {next == undefined ? "" : 
+                      {prev == undefined ? "" : 
                         <div className="updown_page_R">                          
                           <div className="updown_page_context">                            
-                            <Link href={"/"+postId+"/detail/"+next.id}>
+                            <Link href={"/"+postId+"/detail/"+prev.id}>
                               <a>
                                 <div className="img">                             
-                                  <Image src={next.cover_image} alt="img" layout='fill' rel="preload"/>
+                                  <Image src={prev.cover_image} alt="img" layout='fill' rel="preload"/>
                                 </div>
-                                <p className="font18_1">{next.title}</p>
+                                <p className="font18_1">{prev.title}</p>
                               </a>
                               </Link>
                           </div>
@@ -150,12 +150,13 @@ export default function Page(props) {
                 </div>
 
                 <div className="program_content_main_detail_label_box">
+
+                  {keywords.length != 0 ? 
                   <div className="program_content_main_detail_label">
                     <div className="program_content_main_detail_label_titel font16_5">標　　籤</div>
                     <div className="program_content_main_detail_label_titel_list">
                       <ul id='keywords'>
-                        {
-                          keywords.length == 0 ? 'Loading  keywords...': keywords.map((val, key) => (                                
+                        {keywords.map((val, key) => (                                
                             <li key={key} className="font16_6" >
                               <button className="keyword_btn" value={val}>{val}</button>
                             </li>
@@ -164,26 +165,25 @@ export default function Page(props) {
                       </ul>
                     </div>
                   </div>
+                  :''
+                  }
 
-                  <div className="program_content_main_detail_label">
-                    <div class="program_content_main_detail_label_titel font16_5">追　　蹤</div>
-                    <div class="community_btn">                  
-                      <ul>
-                        {                          
-                          menu.program.facebook=="" ? "" :                            
-                          <li className="font16_1">
-                            <Link href={menu.program.facebook} target="_blank">加入</Link>
-                          </li>
-                          }
-                          {
-                          menu.program.youtube=="" ? "" :                            
-                          <li className="font16_2">
-                            <Link href={menu.program.youtube} target="_blank">訂閱</Link>
-                          </li>
-                        }
-                      </ul>
-                    </div>
-                  </div>
+                  { menu.program.facebook!="" || menu.program.youtube!="" ? 
+                        <div className="program_content_main_detail_label">
+                        <div class="program_content_main_detail_label_titel font16_5">追　　蹤</div>
+                        <div class="community_btn">                  
+                          <ul>
+                              <li className="font16_1">
+                                <Link href={menu.program.facebook} target="_blank">加入</Link>
+                              </li>
+                              <li className="font16_2">
+                                <Link href={menu.program.youtube} target="_blank">訂閱</Link>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                  :""              
+                  }
                 </div>
 
                 <div class="jump_list_up_down2 text_center mobile_display">
