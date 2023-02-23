@@ -8,7 +8,8 @@ function Navber (props) {
     const social=props.social;
       //return <pre>{JSON.stringify(menu,null,4)}</pre>
 return(
-    <> 
+
+    <>       
         <div className="google-search"><div className="gcse-search"></div></div>
         <div className="program_header">
             <div className="main_header">
@@ -33,7 +34,8 @@ return(
                     <div className="header_search_m">   
                         <button className="search_btn" id="search_button"><Image src="/search_btn.svg" width={35} height={35} alt="search_btn" title="search_btn"/></button>               
                         <button className="ham"><Image src="/ham.svg" width={25} height={25} title="btn"/></button>
-                        <div className="search_page">                                                  
+                        <div className="search_page">         
+                            <button class="search_close_btn"><Image src="/ham_close.svg" width={25} height={25} alt="xx" /></button>                                           
                             <div className="search_page_inner">
                                 <input className="search_page_input" type="search" id="search_mobile" placeholder="請輸入關鍵字"/>
                             </div>
