@@ -116,24 +116,19 @@ function myJquery(){
         }
         lastScrollTop = $(window).scrollTop();
         
-        if ($(window).scrollTop()>50){  
-          if($(window).scrollTop()>header_h){
-              $('.program_content_updown_page_box').fadeIn(300);
-              $('.program_content_community_list').fadeIn(300);
-          }else{
-              $('.program_content_updown_page_box').hide();
-              $('.program_content_community_list').hide();
-          }
-        }else{
-              $('.program_content_updown_page_box').hide();
-              $('.program_content_community_list').hide();
-        }
-
-
         if($(window).scrollTop()>50){
             $('#back').fadeIn(300);
+            if($(window).scrollTop()>header_h){
+              $('.program_content_updown_page_box').fadeIn(300);
+              $('.program_content_community_list').fadeIn(300);
+            }else{
+                $('.program_content_updown_page_box').hide();
+                $('.program_content_community_list').hide();
+            }
         }else{
             $('#back').hide();
+            $('.program_content_updown_page_box').hide();
+            $('.program_content_community_list').hide();
         }
     }
 
