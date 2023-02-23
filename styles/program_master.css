@@ -644,7 +644,7 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 	position:relative;
 	transition:0.3s; cursor:pointer;
 }
-.updown_page_L,.updown_page_R{height:126px;display:flex;}
+.updown_page_L,.updown_page_R{height:126px;display:flex;position:absolute;}
 .updown_page_R{ 
 	position:absolute;right:-240px;
 }
