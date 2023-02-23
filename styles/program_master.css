@@ -686,8 +686,8 @@ background-size:11px; background-repeat:no-repeat; background-position:6px 16px;
 .program_content_community_list li{width:50px;height:50px; margin-bottom:10px;position:relative;cursor: pointer;}
 @media (max-width: 1366px){.program_content_community_list_box{display:none;}}
 /* 手機版 */
-.program_content_community_list_mobile{width:100%;position:fixed;left:0;top:0;background-color: rgba(0,0,0,0.5); padding:8px; z-index:2;display:none;}
-.program_content_community_list_mobile li{width:45px;height:45px; margin-right:8px; display:inline-block;position:relative;cursor: pointer;}
+.program_content_community_list_mobile{width:100%;position:fixed;left:0;top:0;background-color: rgba(0,0,0,0.5); padding:5px; z-index:2;display:none;}
+.program_content_community_list_mobile li{width:35px;height:35px; margin-right:8px; display:inline-block;position:relative;cursor: pointer;}
 /* 手機版 ed */
 /* 內頁用社群跟著跑ed */
 .height_auto img{width: 100%;height:auto;}
