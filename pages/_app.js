@@ -100,32 +100,35 @@ function myJquery(){
     // /*內頁上下頁控制 ed*/
     // 社群跟著跑
     $(window).scroll(function(){
-      if ($(window).scrollTop()>50){
-        object_scroll();             
-      }else{
-        $('.program_content_community_list_mobile').hide();    
-      }  
+        object_scroll();   
     });
     var header_h=$('.program_header').outerHeight(true);
     var lastScrollTop = 0;
-    function object_scroll(){
+    function object_scroll(){      
         if(($(window).scrollTop()>lastScrollTop)){
           if($(window).width()<1024){
-            $('.program_content_community_list_mobile').show();
+              $('.program_content_community_list_mobile').show();
             }else{
-                $('.program_content_community_list_mobile').hide();
+              $('.program_content_community_list_mobile').hide();
             }
         }else{
             $('.program_content_community_list_mobile').hide();
         }
         lastScrollTop = $(window).scrollTop();
-        if($(window).scrollTop()>header_h){
-            $('.program_content_updown_page_box').fadeIn(300);
-            $('.program_content_community_list').fadeIn(300);
+        
+        if ($(window).scrollTop()>50){  
+          if($(window).scrollTop()>header_h){
+              $('.program_content_updown_page_box').fadeIn(300);
+              $('.program_content_community_list').fadeIn(300);
+          }else{
+              $('.program_content_updown_page_box').hide();
+              $('.program_content_community_list').hide();
+          }
         }else{
-            $('.program_content_updown_page_box').hide();
-            $('.program_content_community_list').hide();
+              $('.program_content_updown_page_box').hide();
+              $('.program_content_community_list').hide();
         }
+
 
         if($(window).scrollTop()>50){
             $('#back').fadeIn(300);
